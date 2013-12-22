@@ -59,7 +59,8 @@ body {
 }
 
 h1 {
-  font-size: 150%;
+  font-size: 140%;
+  font-weight: bold;
 }
 h2 {
   font-size: 130%;
@@ -71,12 +72,25 @@ h4,h5,h6 {
   font-size: 110%;
 }
 
+a {
+  @include transition(color,text-shadow,.25s);
+  text-decoration: none !important;
+}
+
 
 /* 5. custom styles */
 
+body:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid $shadowColor;
+}
+body:before,
 #top-links {
   height: 30px;
-  border-bottom: 1px solid $shadowColor;
 }
 
 #header {
@@ -86,6 +100,7 @@ h4,h5,h6 {
     text-decoration: none;
   }
   #header-nav {
+    position: relative;
     .logo {
       float: left;
       color: #fff;
@@ -130,6 +145,7 @@ h4,h5,h6 {
           text-shadow: 1px 1px 0 $shadowColor;
           &:hover {
             color: white;
+            text-shadow: 0 0 4px #ddd;
           }
         }
       }
