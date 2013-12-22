@@ -1,11 +1,14 @@
-<header id="header" class="bs-1">
+
+<header id="header" class="container">
+
+<!--
     <nav id="main-nav">
-        <!-- NOTE: tab-indexes 11-60 are reserved for main navigation -->
-        <ul id="nav-list" class="sf-menu no-bullets sf-js-enabled sf-shadow">
+        &lt;!&ndash; NOTE: tab-indexes 11-60 are reserved for main navigation &ndash;&gt;
+        <ul id="nav-list">
             <li>
-                <a tabindex="11" href="/index.html" class="top-level sf-with-ul">About<span
+                <a tabindex="11" href="/index.html">About<span
                         class="sf-sub-indicator"> »</span></a>
-                <ul style="display: none; visibility: hidden;">
+                <ul>
                     <li>
                         <a tabindex="12" href="/content/company-profile.html">Company Profile</a>
                     </li>
@@ -21,9 +24,9 @@
                 </ul>
             </li>
             <li>
-                <a tabindex="21" href="/content/services.html" class="top-level sf-with-ul">Services<span
+                <a tabindex="21" href="/content/services.html">Services<span
                         class="sf-sub-indicator"> »</span></a>
-                <ul style="display: none; visibility: hidden;">
+                <ul>
                     <li>
                         <a tabindex="22" href="/content/project-development.html">Project Development</a>
                     </li>
@@ -44,9 +47,9 @@
                 </ul>
             </li>
             <li>
-                <a tabindex="31" href="/content/business-relations.html" class="top-level sf-with-ul">Business Relations<span
+                <a tabindex="31" href="/content/business-relations.html">Business Relations<span
                         class="sf-sub-indicator"> »</span></a>
-                <ul style="display: none; visibility: hidden;">
+                <ul>
                     <li>
                         <a tabindex="32" href="/content/customers.html">Customers</a>
                     </li>
@@ -63,9 +66,36 @@
             </li>
         </ul>
     </nav>
+-->
 
     <!-- NOTE: tab-indexes 1-10 are reserved for first-level hooks -->
-    <span class="consult">Call for Consulting: +972-54-260-7104</span>
-    <a tabindex="1" title="to navigation" href="#main-nav" class="jump-to-nav hidden">Jump To Navigation</a>
-    <a tabindex="6" title="Home" href="/index.html" id="logo" class="round-14"></a>
+    <!--<span class="consult">Call for Consulting: +972-54-260-7104</span>-->
+    <!--<a tabindex="1" title="to navigation" href="#main-nav" class="jump-to-nav hidden">Jump To Navigation</a>-->
+    <!--<a tabindex="6" title="Home" href="/index.html" id="logo" class="round-14"></a>-->
+
+    <div id="header-nav" class="row">
+        <div>
+            <a class="logo horizontal"><span>123</span>Completed</a>
+        </div>
+        <div class="pull-right">
+            <nav>
+                <ul>
+                    <li>
+                        <a tabindex="11" href="/index.html">About</a>
+                    </li>
+                    <li>
+                        <a tabindex="21" href="/content/services.html">Services</a>
+                    </li>
+                    <li>
+                        <a tabindex="31" href="/content/business-relations.html">Business Relations</a>
+                    </li>
+                    <li>
+                        <a tabindex="41" href="/content/contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
 </header>
