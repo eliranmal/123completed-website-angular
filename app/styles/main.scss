@@ -106,9 +106,6 @@ body:before,
 #header {
   padding-top: 30px;
   padding-bottom: 30px;
-  a {
-    text-decoration: none;
-  }
   #header-nav {
     .logo {
       position: relative;
@@ -213,9 +210,10 @@ body:before,
     & > section > h1 {
       margin-top: -10px;
     }
-  }
-  a {
-    font-weight: bold;
+    a {
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #ffffff;
+    }
   }
 }
 #home [class*="span"] {
