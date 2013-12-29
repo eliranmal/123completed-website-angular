@@ -1,13 +1,14 @@
-
-<div class="container-fluid">
+<div id="wrapper" class="container-fluid">
     <div ng-include="'views/header.html'" class="row-fluid"></div>
-    <div ng-switch="data.url" class="row-fluid">
+    <div ng-switch="data.url">
         <div ng-switch-when="/">
-            <div ng-include="'views/main.html'"></div>
+            <div ng-include="'views/home.html'"></div>
         </div>
         <div ng-switch-default>
-            <div ng-include="'views/content/' + data.route.current.params['page']" class="span8 pull-right"></div>
-            <div ng-include="'views/sidebar.html'" class="span4"></div>
+            <div id="inner" class="row-fluid">
+                <div ng-include="'views/sidebar.html'" class="span4"></div>
+                <div ng-include="'views/partials/' + data.route.current.params['page']" class="span8"></div>
+            </div>
         </div>
     </div>
     <div ng-include="'views/footer.html'"></div>

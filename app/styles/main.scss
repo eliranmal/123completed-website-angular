@@ -17,20 +17,24 @@ colors:
 /* 1. embedded fonts */
 @import "fonts";
 
-/* 2.sass */
+/* 2. sass */
 
 /* variables overrides */
-$textColor: #002355;
-$linkColor: #164779;
-$linkColorHover: #002355;
-$headingsColor: #002355;
+//$textColor: #002355;
+$textColor: #555;
+$linkColor: $textColor;
+$linkColorHover: #4488d5;
+//$headingsColor: #002355;
+$headingsColor: #619ee7;
 $headingsFontWeight: normal;
-$baseFontSize: 17px;
-$baseFontFamily: 'district_prothin';
+$baseFontSize: 18px;
+$baseFontFamily: district_prothin;
+$gridGutterWidth: 26px;
 
 /* custom variables */
-$compositeColor: #e2e2e2;
+$compositeColor: #e6e6e6;
 $shadowColor: $textColor;
+$c123Color: #4488d5;
 
 /* bootstrap */
 @import "bootstrap-sass/lib/bootstrap";
@@ -56,6 +60,7 @@ body {
   //@include gradient-vertical(#001642,#00467F);
   @include gradient-vertical(#000b22,#001133);
   background-color: #001133;
+  line-height: 1.5;
 }
 
 h1 {
@@ -86,11 +91,16 @@ body:before {
   display: block;
   left: 0;
   right: 0;
-  border-bottom: 1px solid $shadowColor;
+  //border-bottom: 1px solid $shadowColor;
 }
 body:before,
 #top-links {
   height: 30px;
+}
+
+#wrapper {
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
 #header {
@@ -100,37 +110,62 @@ body:before,
     text-decoration: none;
   }
   #header-nav {
-    position: relative;
     .logo {
-      float: left;
-      color: #fff;
-      margin-left: 7px;
-      span {
-        margin-left: -6px;
-        line-height: 1;
-        font-size: 58px;
-        font-weight: bold;
-        letter-spacing: .15em;
-      }
-      &.vertical {
-        font: 22px verdana, verdanaregular;
-        span {
-          display: block;
+      position: relative;
+      div {
+        position: absolute;
+        line-height: 0;
+        color: #fff;
+        &.one {
+          font-size: 28px;
+          font-weight: bold;
+          //letter-spacing: .18em;
+        }
+        &.completed {
+          top: 5px;
+          left: 50px;
+          font-family: lane;
+          font-size: 37px;
+          //font-size: 28px;
+          //font-weight: bold;
+          //text-transform: uppercase;
+          //letter-spacing: .003em;
         }
       }
-      &.horizontal,&.horizontal span {
+/*      &:after,
+      span:before,
+      &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
       }
-      &.horizontal {
-        font: bold 32px colaborate-bold;
-      }
-      &.horizontal span {
-        font: normal 28px $baseFontFamily;
-      }
-      &.triangle {
+      &:before {
+        top: -27px;
+        left: 70px;
         display: block;
+        width: 74px;
+        height: 74px;
+        background-color: #4e72bc;
+        @include opacity(70);
+      }*/
+/*      &:after {
+        top: -10px;
+        left: 70px;
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-color: #415a91;
+        @include opacity(50);
       }
-      &.overlap {
-      }
+      span:before {
+        top: 0;
+        left: 30px;
+        display: block;
+        width: 90px;
+        height: 90px;
+        background-color: #244791;
+        @include opacity(70);
+      }*/
     }
     nav {
       float: right;
@@ -138,7 +173,7 @@ body:before,
       li {
         list-style-type: none;
         float: left;
-        margin-right: .7em;
+        margin-right: 1.2em;
         font-size: 1.3em;
         a {
           color: $compositeColor;
@@ -153,16 +188,36 @@ body:before,
   }
 }
 
-#main {
-  .row [class*="span"] {
-    height: 300px;
-    margin-bottom: 20px;
-    padding: 24px;
-    background-color: $compositeColor;
-    color: #002355;
-    & > h1 {
-      margin-top: 0;
-      line-height: 1;
+.services-list {
+  margin-left: 0;
+  li {
+    list-style-type: none;
+    font-size: 1em;
+    line-height: 2.7;
+    &:not(:last-child) {
+      border-bottom: 1px solid #cccccc;
     }
   }
+}
+
+/* TODO make more specific, so it would apply only to layout boxes */
+#home,
+#inner {
+  [class*="span"] {
+    min-height: 400px;
+    margin-bottom: $gridGutterWidth + 4;
+    padding: $gridGutterWidth + 12;
+    background-color: $compositeColor;
+    //background-color: #008dc6;
+    & > h1,
+    & > section > h1 {
+      margin-top: -10px;
+    }
+  }
+  a {
+    font-weight: bold;
+  }
+}
+#home [class*="span"] {
+  height: 400px;
 }

@@ -6,7 +6,6 @@ angular.module('123CompletedWebsiteApp', [
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
-//                templateUrl: 'views/main.html',
                 templateUrl: 'views/layout.html',
                 controller: 'MainCtrl'
             })

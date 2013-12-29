@@ -257,7 +257,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             'bower_components/**/*',
                             'images/{,*/}*.{gif,webp,svg}',
-                            'styles/fonts/**/*'
+                            'styles/fonts/**/*.{svg,woff,eot,ttf,css}'
                         ]
                     },
                     {
@@ -324,12 +324,12 @@ module.exports = function (grunt) {
             build: {
                 auth: {
                     host: '65.75.158.216', // www.eliranmalka.com
-                    port: 21
+                    port: 21 // ftp port
 //                    authKey: 'key1'
                 },
                 src: '<%= yeoman.dist %>',
                 dest: '/public_html/123preview',
-                exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'dist/tmp']
+                exclusions: [ 'bower_components']
             }
         }
     });
