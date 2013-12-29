@@ -29,15 +29,6 @@
     <!-- Add your site or application content here -->
     <div ng-view></div>
 
-<!--
-    <div class="row">
-        <div class="span8 pull-right" ng-view=""></div>
-        <div class="span4" ng-include="'views/sidebar.html'"></div>
-    </div>
-    <div ng-include="'views/header.html'"></div>
-    <div ng-include="'views/footer.html'"></div>
--->
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       var _gaq=[['_setAccount','UA-29312949-1'],['_trackPageview']];
@@ -46,7 +37,9 @@
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
+    <!-- build:js({.tmp,app}) scripts/libs.js -->
     <script src="bower_components/angular/angular.js"></script>
+    <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
