@@ -8,7 +8,6 @@ table of contents:
 5. custom styles
 
 colors:
-#164b8a;
 #619ee7
 #164b8a
 #4488d5
@@ -35,6 +34,8 @@ $gridGutterWidth: 26px;
 $compositeColor: #e6e6e6;
 $shadowColor: $textColor;
 $c123Color: #4488d5;
+$mainGradientTop: #070f22;
+$mainGradientBottom: #1d314e;
 
 /* bootstrap */
 @import "bootstrap-sass/lib/bootstrap";
@@ -58,8 +59,8 @@ $c123Color: #4488d5;
 body {
   //@include gradient-vertical(#002355,#3478aa);
   //@include gradient-vertical(#001642,#00467F);
-  @include gradient-vertical(#000b22,#001133);
-  background-color: #001133;
+  @include gradient-vertical($mainGradientTop,$mainGradientBottom);
+  background-color: $mainGradientBottom;
   line-height: 1.5;
 }
 
@@ -98,14 +99,14 @@ body:before,
   height: 30px;
 }
 
-#wrapper {
+.wrapper {
   margin-left: 6%;
   margin-right: 6%;
 }
 
 #header {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   #header-nav {
     .logo {
       position: relative;
@@ -185,17 +186,28 @@ body:before,
   }
 }
 
-.services-list {
+.services-list, .links-list {
   margin-left: 0;
   li {
     list-style-type: none;
     font-size: 1em;
     line-height: 2.7;
+  }
+}
+.services-list {
+  li {
     &:not(:last-child) {
       border-bottom: 1px solid #cccccc;
     }
   }
 }
+
+.links-list {
+  li {
+    line-height: 2.2;
+  }
+}
+
 
 /* TODO make more specific, so it would apply only to layout boxes */
 #home,
@@ -218,4 +230,21 @@ body:before,
 }
 #home [class*="span"] {
   height: 400px;
+}
+
+#footer {
+  height: 200px;
+  margin-top: $gridGutterWidth;
+  padding-top: $gridGutterWidth + 12;
+  background-color: $mainGradientTop;
+  color: #cccccc;
+  a {
+    color: #cccccc;
+  }
+  [class*="span"] {
+    height: 170px;
+    &:not(:last-child) {
+      border-right: 1px solid $mainGradientBottom;
+    }
+  }
 }
