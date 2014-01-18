@@ -270,6 +270,9 @@ body {
   position: relative;
   background-color: $mainGradientTop;
   color: #cccccc;
+  .row {
+    background-color: $mainGradientTop;
+  }
   a {
     color: #cccccc;
   }
@@ -292,6 +295,14 @@ body {
   }
 }
 
+.services-map {
+  width: 100%;
+  height: 400px;
+  margin: $grid-gutter-width 0;
+  border: 0 none;
+}
+
+/* animation */
 // TODO resolve animation enter container flow (when the DOM has both containers)
 #wrap {
   //min-height: $tileHeight;
