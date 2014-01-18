@@ -48,6 +48,13 @@ $mainGradientBottom: #1d314e;
 /* bootstrap */
 @import "bootstrap-sass/lib/bootstrap";
 
+/* overrides */
+.list-inline.pull-right {
+  > li:last-child {
+    padding-right: 0;
+  }
+}
+
 
 /* 3. helper classes
 -------------------------------------------------- */
@@ -134,10 +141,25 @@ body {
   }
 }
 
+#header,
+#footer {
+  a {
+    color: $compositeColor;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-shadow: 0 0 4px #ddd;
+    }
+  }
+}
+
 #header {
   padding-bottom: 20px;
   #header-nav {
     padding-top: 30px;
+    a {
+      font-weight: normal;
+    }
     .logo {
       position: relative;
       span {
@@ -195,29 +217,18 @@ body {
         padding-right: 0;
         padding-left: 2em;
         font-size: 1.3em;
-        a {
-          color: $compositeColor;
-          text-shadow: 1px 1px 0 $shadowColor;
-          &:hover {
-            color: white;
-            text-shadow: 0 0 4px #ddd;
-          }
-        }
       }
     }
   }
 }
 
 .services-list, .links-list {
-  margin-left: 0;
-  padding-left: 0;
   li {
-    list-style-type: none;
     font-size: 1em;
-    line-height: 2.7;
   }
 }
 .services-list {
+  line-height: 2.7;
   li {
     &:not(:last-child) {
       border-bottom: 1px solid #cccccc;
@@ -227,7 +238,7 @@ body {
 
 .links-list {
   li {
-    line-height: 2.2;
+    line-height: 2;
   }
 }
 
@@ -256,19 +267,32 @@ body {
 }
 
 #footer {
+  position: relative;
   background-color: $mainGradientTop;
   color: #cccccc;
   a {
     color: #cccccc;
   }
   [class*="col-"] {
-    height: 100%;
+    margin-top: $grid-gutter-width;
+    height: $footerHeight - $grid-gutter-width * 2;
     &:not(:last-child) {
       border-right: 1px solid $mainGradientBottom;
     }
   }
+  .website-meta {
+    img {
+      padding: 0 4px 0 0;
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    right: $grid-gutter-width / 2;
+  }
 }
 
+// TODO resolve animation enter container flow (when the DOM has both containers)
 #wrap {
   //min-height: $tileHeight;
   //position: relative;
