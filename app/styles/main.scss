@@ -1,11 +1,12 @@
 
 /*
 table of contents:
-1. embedded fonts
-2. sass
-3. helper classes
-4. baseline styles
-5. custom styles
+  1. embedded fonts
+  2. sass
+  3. helper classes
+  4. baseline styles
+  5. layout
+  6. custom styles
 
 colors:
 #619ee7
@@ -13,26 +14,33 @@ colors:
 #4488d5
 */
 
-/* 1. embedded fonts */
+
+/* 1. embedded fonts
+-------------------------------------------------- */
+
 @import "fonts";
 
-/* 2. sass */
+
+/* 2. sass
+-------------------------------------------------- */
 
 /* variables overrides */
-//$textColor: #002355;
-$textColor: #555;
-$linkColor: $textColor;
-$linkColorHover: #4488d5;
-//$headingsColor: #002355;
-$headingsColor: #619ee7;
-$headingsFontWeight: normal;
-$baseFontSize: 18px;
-$baseFontFamily: district_prothin;
-$gridGutterWidth: 26px;
+$text-color: #555;
+$link-color: $text-color;
+$link-hover-color: #4488d5;
+//$headings-color: #002355;
+$headings-color: #619ee7;
+$headings-font-weight: normal;
+$font-size-base: 18px;
+$font-family-base: district_prothin;
+$grid-gutter-width: 26px;
 
 /* custom variables */
+$footerHeight: 200px;
+$topLinksHeight: 40px;
+$tileHeight: 400px;
 $compositeColor: #e6e6e6;
-$shadowColor: $textColor;
+$shadowColor: $text-color;
 $c123Color: #4488d5;
 $mainGradientTop: #070f22;
 $mainGradientBottom: #1d314e;
@@ -41,7 +49,8 @@ $mainGradientBottom: #1d314e;
 @import "bootstrap-sass/lib/bootstrap";
 
 
-/* 3. helper classes */
+/* 3. helper classes
+-------------------------------------------------- */
 
 .hidden {
   position: absolute !important;
@@ -54,7 +63,8 @@ $mainGradientBottom: #1d314e;
 }
 
 
-/* 4. baseline styles */
+/* 4. baseline styles
+-------------------------------------------------- */
 
 body {
   //@include gradient-vertical(#002355,#3478aa);
@@ -84,50 +94,64 @@ a {
 }
 
 
-/* 5. custom styles */
+/* 5. layout
+-------------------------------------------------- */
 
-body:before {
+/* sticky footer */
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto $footerHeight * -1;
+  padding: 0 0 $footerHeight;
+}
+#footer {
+  height: $footerHeight;
+}
+
+
+/* 6. custom styles
+-------------------------------------------------- */
+
+#wrap:before {
   content: '';
   position: absolute;
-  display: block;
+  top: 0;
   left: 0;
   right: 0;
-  //border-bottom: 1px solid $shadowColor;
-}
-body:before,
-#top-links {
-  height: 30px;
+  height: $topLinksHeight;
+  border-bottom: 1px solid $mainGradientBottom;
 }
 
-.wrapper {
-  margin-left: 6%;
-  margin-right: 6%;
+#top-links {
+  height: $topLinksHeight;
+  line-height: $topLinksHeight;
+  a {
+    color: #fff;
+  }
 }
 
 #header {
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   #header-nav {
+    padding-top: 30px;
     .logo {
       position: relative;
-      div {
-        position: absolute;
-        line-height: 0;
+      span {
+        height: 50px;
         color: #fff;
         &.one {
-          font-size: 28px;
+          line-height: 50px;
+          font-size: 26px;
           font-weight: bold;
-          //letter-spacing: .18em;
         }
         &.completed {
-          top: 5px;
-          left: 50px;
+          line-height: 44px;
           font-family: lane;
           font-size: 37px;
-          //font-size: 28px;
-          //font-weight: bold;
-          //text-transform: uppercase;
-          //letter-spacing: .003em;
         }
       }
 /*      &:after,
@@ -166,12 +190,10 @@ body:before,
       }*/
     }
     nav {
-      float: right;
-      padding-top: 36px;
+      padding-top: 30px;
       li {
-        list-style-type: none;
-        float: left;
-        margin-right: 1.2em;
+        padding-right: 0;
+        padding-left: 2em;
         font-size: 1.3em;
         a {
           color: $compositeColor;
@@ -188,6 +210,7 @@ body:before,
 
 .services-list, .links-list {
   margin-left: 0;
+  padding-left: 0;
   li {
     list-style-type: none;
     font-size: 1em;
@@ -211,15 +234,15 @@ body:before,
 
 /* TODO make more specific, so it would apply only to layout boxes */
 #home,
-#inner {
-  [class*="span"] {
-    min-height: 400px;
-    margin-bottom: $gridGutterWidth + 4;
-    padding: $gridGutterWidth + 12;
+#main {
+  section {
+    min-height: $tileHeight;
+    margin-bottom: $grid-gutter-width + 4;
+    padding: $grid-gutter-width + 12;
     background-color: $compositeColor;
     //background-color: #008dc6;
-    & > h1,
-    & > section > h1 {
+    > h1,
+    > section > h1 {
       margin-top: -10px;
     }
     a {
@@ -228,23 +251,45 @@ body:before,
     }
   }
 }
-#home [class*="span"] {
-  height: 400px;
+#home section {
+  height: $tileHeight;
 }
 
 #footer {
-  height: 200px;
-  margin-top: $gridGutterWidth;
-  padding-top: $gridGutterWidth + 12;
   background-color: $mainGradientTop;
   color: #cccccc;
   a {
     color: #cccccc;
   }
-  [class*="span"] {
-    height: 170px;
+  [class*="col-"] {
+    height: 100%;
     &:not(:last-child) {
       border-right: 1px solid $mainGradientBottom;
     }
   }
+}
+
+#wrap {
+  //min-height: $tileHeight;
+  //position: relative;
+}
+.ng-enter, .ng-leave {
+  //position: absolute;
+  @include transition(all .2s linear 0);
+}
+
+.ng-enter {
+  @include opacity(0);
+}
+
+.ng-enter.ng-enter-active {
+  @include opacity(100);
+}
+
+.ng-leave {
+  @include opacity(100);
+}
+
+.ng-leave.ng-leave-active {
+  @include opacity(0);
 }
