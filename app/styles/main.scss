@@ -252,18 +252,22 @@ body {
     padding: $grid-gutter-width + 12;
     background-color: $compositeColor;
     //background-color: #008dc6;
-    > h1,
-    > section > h1 {
-      margin-top: -10px;
-    }
     a {
       font-weight: bold;
       text-shadow: 1px 1px 0 #ffffff;
+    }
+    > h1,
+    > section > h1 {
+      margin-top: 0;
     }
   }
 }
 #home section {
   height: $tileHeight;
+  > h1,
+  > section > h1 {
+    margin-top: -10px;
+  }
 }
 
 #footer {
