@@ -7,13 +7,13 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate'])
                 templateUrl: '/views/home-template.html',
                 controller: 'MainCtrl'
             })
-            .when('/:page', {
+            .when('/page/:page', {
                 templateUrl: function (params) {
                     console.log('page: ' + params.page);
                     if (params.page) {
                         return '/views/partials/' + params.page;
                     }
-                    return '/';
+                    return '';
                 },
                 controller: 'MainCtrl'
             })

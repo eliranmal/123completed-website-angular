@@ -176,7 +176,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                        '<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/styles/fonts/**/*.{svg,woff,eot,ttf}'
                     ]
                 }
@@ -189,11 +189,27 @@ module.exports = function (grunt) {
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/**/*.html'],
+            css: ['<%= yeoman.dist %>/styles/**/*.css'],
             options: {
+                // TODO try this:
+                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
+/*
+                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
+                patterns: {
+                    // FIXME While usemin won't have full support for revved files we have to put all references manually here
+                    js: [
+                        [/(customer-icon\.svg)/g, 'Replacing reference to customer-icon.png'],
+                        [/(iitail-logo\.svg)/g, 'Replacing reference to iitail-logo.png'],
+                        [/(no_image\.png)/g, 'Replacing reference to no_image.png'],
+                        [/(printer-iconx2\.png)/g, 'Replacing reference to printer-iconx2.png'],
+                        [/(email-iconx2\.png)/g, 'Replacing reference to email-iconx2.png'],
+                        [/(coins\.png)/g, 'Replacing reference to coins.png']
+                    ]
+*/
                 dirs: ['<%= yeoman.dist %>']
             }
+
         },
         imagemin: {
             dist: {
@@ -201,7 +217,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= yeoman.app %>/images',
-                        src: '{,*/}*.{png,jpg,jpeg}',
+                        src: '**/*.{png,jpg,jpeg}',
                         dest: '<%= yeoman.dist %>/images'
                     }
                 ]
@@ -255,8 +271,7 @@ module.exports = function (grunt) {
                         src: [
                             '*.{ico,png,txt}',
                             '.htaccess',
-                            'bower_components/**/*',
-                            'images/{,*/}*.{gif,webp,svg}',
+                            'images/**/*.{gif,webp,svg}',
                             'styles/fonts/**/*.{svg,woff,eot,ttf,css}'
                         ]
                     },
