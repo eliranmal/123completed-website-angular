@@ -1,0 +1,26 @@
+
+/* bootstrap sass overrides
+-------------------------------------------------- */
+
+$text-color: #555;
+$link-color: $text-color;
+$link-hover-color: #4488d5;
+//$headings-color: #002355;
+$headings-color: #619ee7;
+$headings-font-weight: normal;
+$font-size-base: 18px;
+$font-family-base: district_prothin;
+$grid-gutter-width: 28px;
+
+/* custom variables
+-------------------------------------------------- */
+
+$footerHeight: 220px;
+$topLinksHeight: 40px;
+$tileHeight: 420px;
+$compositeColor: #e6e6e6;
+$shadowColor: $text-color;
+$c123Color: #4488d5;
+$mainGradientTop: #070f22;
+$mainGradientBottom: #1d314e;
+$boxPad: $grid-gutter-width * 1.1;
