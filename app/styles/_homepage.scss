@@ -1,0 +1,11 @@
+#home {
+
+  .services-list {
+    line-height: 2.7;
+    li {
+      &:not(:last-child) {
+        border-bottom: 1px solid #cccccc;
+      }
+    }
+  }
+}

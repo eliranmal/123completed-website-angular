@@ -2,9 +2,15 @@
 
     <div class="row">
         <div class="col-md-8">
-            <section ng-controller="AcknowledgmentsCtrl" class="acknowledgments-box">
-                <div acknowledgments></div>
+            <section class="banner">
+                <div class="photo"></div>
+                <div class="text">We're the bestest!</div>
             </section>
+<!--
+            <section class="acknowledgments-box">
+                &lt;!&ndash;<div acknowledgments></div>&ndash;&gt;
+            </section>
+-->
         </div>
         <div class="col-md-4">
             <section ng-include="'views/partials/what-we-do.html'"></section>
@@ -19,7 +25,10 @@
             <section></section>
         </div>
         <div class="col-md-4">
-            <section></section>
+            <section class="acknowledgments-box">
+                <h1>Our customers say</h1>
+                <div acknowledgments></div>
+            </section>
         </div>
     </div>
 

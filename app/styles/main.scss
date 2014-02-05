@@ -7,10 +7,6 @@ table of contents:
   5. layout
   6. custom styles
 
-colors:
-  #619ee7
-  #164b8a
-  #4488d5
 */
 
 
@@ -27,6 +23,8 @@ colors:
 // TODO test font awesome and utilize it
 @import "../bower_components/font-awesome/scss/font-awesome";
 /* partials */
+@import "layout";
+@import "homepage";
 @import "acknowledgments";
 @import "staff";
 @import "services";
@@ -36,19 +34,6 @@ colors:
   > li:last-child {
     padding-right: 0;
   }
-}
-
-/* 3. helper classes
--------------------------------------------------- */
-
-.hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden
 }
 
 /* 4. baseline styles
@@ -87,25 +72,6 @@ a {
   text-decoration: none !important;
 }
 
-/* 5. layout
--------------------------------------------------- */
-
-/* sticky footer */
-html,
-body {
-  height: 100%;
-}
-
-#wrap {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto $footerHeight * -1;
-  padding: 0 0 $footerHeight;
-}
-
-#footer {
-  height: $footerHeight;
-}
 
 /* 6. custom styles
 -------------------------------------------------- */
@@ -215,26 +181,7 @@ body {
   }
 }
 
-.services-list, .links-list {
-  li {
-    font-size: 1em;
-  }
-}
 
-.services-list {
-  line-height: 2.7;
-  li {
-    &:not(:last-child) {
-      border-bottom: 1px solid #cccccc;
-    }
-  }
-}
-
-.links-list {
-  li {
-    line-height: 2;
-  }
-}
 
 /* TODO make more specific, so it would apply only to layout boxes */
 #main {
@@ -260,7 +207,7 @@ body {
   height: $tileHeight;
   > h1 {
     margin: -10px 0 0;
-    border-bottom: 0 none;
+    border-bottom: 0 none; // TODO create conditional classname for non-home pages to avoid negative overrides like this one
   }
 }
 
@@ -291,7 +238,48 @@ body {
     bottom: 0;
     right: $grid-gutter-width / 2;
   }
+  .links-list {
+    li {
+      line-height: 2;
+    }
+  }
 }
+
+.banner {
+  position: relative;
+  padding: 0 !important;
+
+  .photo,
+  .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .photo {
+    height: 100%;
+    background: url('/images/stock-photos/can-stock-photo_csp4071433.jpg') 50% 50% no-repeat;
+    //background: url('/images/stock-photos/can-stock-photo_csp0167406.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    @include opacity(.8);
+  }
+  .text {
+    top: 50%;
+    height: 30%;
+    padding: 0 2em;
+    background-color: $c123Color;
+    color: #fff;
+    font: $font-size-large * 1.4 lane;
+    line-height: 4;
+    text-shadow: -1px -1px 0 $mainGradientBottom;
+    @include opacity(.8);
+    //@include gradient-radial($mainGradientBottom, transparent);
+  }
+}
+
+
 
 /* animation */
 // TODO resolve animation enter container flow (when the DOM has both containers)
