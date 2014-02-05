@@ -1,0 +1,12 @@
+.services {
+
+  .global-services-map {
+    padding-bottom: $boxPad * 2;
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0 none;
+    }
+  }
+}
