@@ -1,5 +1,5 @@
 <div class="acknowledgments-ticker">
-    <ul rn-carousel class="list-unstyled">
+    <ul rn-carousel rn-carousel-buffered rn-carousel-index="slideIndex" class="list-unstyled">
         <li ng-repeat="datum in data">
             <blockquote class="quote">{{ datum.quote }}</blockquote>
             <p class="ref">{{ datum.ref }}</p>

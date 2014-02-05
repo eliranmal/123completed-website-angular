@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('123CompletedWebsiteApp')
-    .controller('MainCtrl', function ($scope, $route) {
+    .controller('MainCtrl', function ($scope) {
 
     });
