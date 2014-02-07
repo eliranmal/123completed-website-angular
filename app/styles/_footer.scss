@@ -1,0 +1,33 @@
+#footer {
+  position: relative;
+  background-color: $mainGradientTop;
+  color: #cccccc;
+  .row {
+    background-color: $mainGradientTop;
+  }
+  a {
+    color: #cccccc;
+  }
+  [class*="col-"] {
+    margin-top: $boxPad;
+    height: $footerHeight - $boxPad * 2;
+    &:not(:last-child) {
+      border-right: 1px solid $mainGradientBottom;
+    }
+  }
+  .website-meta {
+    img {
+      padding: 0 4px 0 0;
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    right: $grid-gutter-width / 2;
+  }
+  .links-list {
+    li {
+      line-height: 2;
+    }
+  }
+}

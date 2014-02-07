@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  padding: 0 !important;
+
+  .photo,
+  .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .photo {
+    height: 100%;
+    background: url('/images/stock-photos/can-stock-photo_csp4071433.jpg') 50% 50% no-repeat;
+    //background: url('/images/stock-photos/can-stock-photo_csp0167406.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    @include opacity(.8);
+  }
+  .text {
+    top: 50%;
+    height: 30%;
+    padding: 0 2em;
+    background-color: $c123Color;
+    color: #fff;
+    font: $font-size-large * 1.4 lane;
+    line-height: 4;
+    text-shadow: -1px -1px 0 $mainGradientBottom;
+    @include opacity(.8);
+    //@include gradient-radial($mainGradientBottom, transparent);
+  }
+}

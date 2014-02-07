@@ -1,0 +1,40 @@
+#header {
+  padding-bottom: 20px;
+  #header-nav {
+    padding: 30px 1em 0;
+    a {
+      font-weight: normal;
+    }
+    .logo {
+      position: relative;
+      //display: block;
+      //width: 100px;
+      //height: 100px;
+      //background: url('/images/123completed-logo.png') 50% 50% no-repeat;
+      //background-size: contain;
+      //margin-bottom: 1em;
+      span {
+        height: 50px;
+        color: #fff;
+        &.one {
+          line-height: 50px;
+          font-size: 26px;
+          font-weight: bold;
+        }
+        &.completed {
+          line-height: 44px;
+          font-family: lane;
+          font-size: 37px;
+        }
+      }
+    }
+    nav {
+      padding-top: 30px;
+      li {
+        padding-right: 0;
+        padding-left: 2em;
+        font-size: 1.3em;
+      }
+    }
+  }
+}

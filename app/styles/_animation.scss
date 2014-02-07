@@ -1,0 +1,30 @@
+
+// TODO resolve animation enter container flow (when the DOM has both containers)
+// TODO comment this in after preventing these rules from applying on the rn-carousel (it creates a duplication bug)
+/*
+#wrap {
+  //min-height: $tileHeight;
+  //position: relative;
+}
+
+.ng-enter, .ng-leave {
+  //position: absolute;
+  @include transition(all .2s linear 0);
+}
+
+.ng-enter {
+  @include opacity(0);
+}
+
+.ng-enter.ng-enter-active {
+  @include opacity(100);
+}
+
+.ng-leave {
+  @include opacity(100);
+}
+
+.ng-leave.ng-leave-active {
+  @include opacity(0);
+}
+*/

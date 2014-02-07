@@ -1,0 +1,42 @@
+
+body {
+  //@include gradient-vertical(#002355,#3478aa);
+  //@include gradient-vertical(#001642,#00467F);
+  @include gradient-vertical($mainGradientTop, $mainGradientBottom);
+  background-color: $mainGradientBottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 1px 1px 0 #fff;
+}
+
+h1 {
+  font-size: 155%;
+  //font-weight: bold;
+}
+
+h2 {
+  font-size: 125%;
+}
+
+h3 {
+  font-size: 110%;
+}
+
+h4, h5, h6 {
+  font-size: 100%;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  outline: 0 none;
+  text-decoration: none !important;
+  @include transition(color, text-shadow, .25s);
+}
+
+/* bootstrap specific */
+
+.list-inline.pull-right {
+  > li:last-child {
+    padding-right: 0;
+  }
+}

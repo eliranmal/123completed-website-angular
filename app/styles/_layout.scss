@@ -14,3 +14,64 @@ body {
 #footer {
   height: $footerHeight;
 }
+
+/* customization */
+
+#wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $topLinksHeight;
+  border-bottom: 1px solid $mainGradientBottom;
+}
+
+#top-links {
+  height: $topLinksHeight;
+  line-height: $topLinksHeight;
+  a {
+    color: #fff;
+  }
+}
+
+#header,
+#footer {
+  a {
+    color: $compositeColor;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-shadow: 0 0 4px #ddd;
+    }
+  }
+}
+
+
+
+/* TODO make more specific, so it would apply only to layout boxes */
+#main {
+  section {
+    min-height: $tileHeight;
+    margin-bottom: $grid-gutter-width;
+    padding: $boxPad / 2 $boxPad + 12 $boxPad + 12;
+    background-color: $compositeColor;
+    //background-color: #008dc6;
+    a {
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #ffffff;
+    }
+    > h1 {
+      //padding: 1em 0 1.5em;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+}
+
+#home section {
+  height: $tileHeight;
+  > h1 {
+    //margin: -10px 0 0;
+    border-bottom: 0 none; // TODO create conditional classname for non-home pages to avoid negative overrides like this one
+  }
+}
