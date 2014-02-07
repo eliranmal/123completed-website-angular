@@ -1,9 +1,20 @@
 .staff {
-  h2 {
-    margin-top: 0;
-  }
-  .member-image {
-    float: left;
-    margin-right: 1em;
+  .member {
+    padding: $boxPad * .75 $boxPad * .5 $boxPad * .25;
+
+    h2 {
+      margin-top: 0;
+    }
+    .member-image {
+      float: left;
+      margin-right: 1em;
+      &.img-thumbnail,
+      &.thumbnail {
+        padding: 0;
+        border: 1px solid #fff;
+        @include border-top-radius(0);
+        @include border-bottom-radius(0);
+      }
+    }
   }
 }

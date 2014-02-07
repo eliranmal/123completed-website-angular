@@ -40,3 +40,21 @@ a, a:link, a:visited, a:hover, a:active {
     padding-right: 0;
   }
 }
+
+#main {
+  section {
+    a {
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #ffffff;
+    }
+    > h1 {
+      //padding: 1em 0 1.5em;
+      &:after {
+        content: '';
+        display: block;
+        padding-top: .5em;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+}

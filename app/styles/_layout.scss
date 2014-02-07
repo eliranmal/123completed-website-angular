@@ -57,14 +57,6 @@ body {
     padding: $boxPad / 2 $boxPad + 12 $boxPad + 12;
     background-color: $compositeColor;
     //background-color: #008dc6;
-    a {
-      font-weight: bold;
-      text-shadow: 1px 1px 0 #ffffff;
-    }
-    > h1 {
-      //padding: 1em 0 1.5em;
-      border-bottom: 1px solid #ffffff;
-    }
   }
 }
 
