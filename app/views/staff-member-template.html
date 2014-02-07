@@ -1,14 +1,14 @@
-<div class="member">
-    <img class="member-image img-thumbnail" ng-src="{{ model.imagePath }}" alt="{{ model.name }}'s photo" width="80" height="80" />
-    <h2>{{ model.name }}, {{ model.jobTitle }}</h2>
-    <p>{{ model.body }}</p>
+<div class="member" ng-class="{ collapsed: model.collapsed }" ng-click="model.collapsed = !model.collapsed">
+    <img class="member-image img-thumbnail" ng-src="{{ data.imagePath }}" alt="{{ data.name }}'s photo" width="120" height="120" />
+    <h2>{{ data.name }}, {{ data.jobTitle }}</h2>
+    <p>{{ data.body }}</p>
     <ul class="contact-links list-unstyled">
         <li>
-            <a class="icon-email" href="mailto:{{ model.email }}" title="E-Mail {{ model.name }} at {{ model.email }}"></a>
+            <a class="icon-email" href="mailto:{{ data.email }}" title="E-Mail {{ data.name }} at {{ data.email }}"></a>
             <!--<a class="fa-stack-exchange" href="mailto:eyal.rubin@123completed.com" title="E-Mail Eyal Rubin at eyal.rubin@123completed.com"></a>-->
         </li>
         <li>
-            <a class="icon-linkedin" href="{{ model.linkedinUrl }}" title="{{ model.name }}'s LinkedIn profile"></a>
+            <a class="icon-linkedin" href="{{ data.linkedinUrl }}" title="{{ data.name }}'s LinkedIn profile"></a>
         </li>
     </ul>
 </div>

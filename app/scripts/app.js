@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'angular-carousel'])
+angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'angular-carousel', 'wu.masonry'])
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {

@@ -1,6 +1,41 @@
+
 .staff {
+
   .member {
-    padding: $boxPad * .75 $boxPad * .5 $boxPad * .25;
+    position: relative;
+    //width: 400px;
+    margin-top: 1em;
+    padding: $boxPad * .75 $boxPad * .5 $boxPad * .25 + 32px;
+    border: 1px solid #eee;
+    background-color: #f6f6f6;
+    cursor: pointer;
+
+    &:after {
+      content: '<';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      height: 32px;
+      text-align: center;
+      background-color: #eee;
+    }
+
+    &:hover {
+      border: 1px solid #f6f6f6;
+      &:after {
+        background-color: #f6f6f6;
+      }
+    }
+
+    &.collapsed {
+      height: 250px;
+      overflow-y: hidden;
+      &:after {
+        content: '>';
+      }
+    }
 
     h2 {
       margin-top: 0;

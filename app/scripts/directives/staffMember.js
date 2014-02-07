@@ -5,14 +5,14 @@ angular.module('123CompletedWebsiteApp')
         return {
             templateUrl: 'views/staff-member-template.html',
             restrict: 'E',
-            scope: true,
-            controller: function ($scope, $resource) {
-                $scope.Members = $resource('data/staff.json');
+            scope: {
+                'data': '=memberData'
             },
+            replace: true,
             link: function postLink(scope, element, attrs) {
-                scope.Members.get(function (result) {
-                    scope.model = result[attrs.key];
-                });
+                scope.model = {
+                    collapsed: true
+                };
             }
         };
     });
