@@ -1,39 +1,81 @@
 #header {
   padding-bottom: 20px;
-  #header-nav {
-    padding: 30px 1em 0;
-    a {
-      font-weight: normal;
+}
+
+#main-nav {
+  padding-top: 30px;
+  ul > li {
+    position: relative;
+    padding: 0 0 0 2em;
+
+    > a {
+      padding-bottom: 6px;
+      font-size: 1.3em;
+      line-height: 1;
     }
-    .logo {
-      position: relative;
-      //display: block;
-      //width: 100px;
-      //height: 100px;
-      //background: url('/images/123completed-logo.png') 50% 50% no-repeat;
-      //background-size: contain;
-      //margin-bottom: 1em;
-      span {
-        height: 50px;
-        color: #fff;
-        &.one {
-          line-height: 50px;
-          font-size: 26px;
-          font-weight: bold;
-        }
-        &.completed {
-          line-height: 44px;
-          font-family: lane;
-          font-size: 37px;
+
+    > a + ul {
+      position: absolute;
+      top: calc(1.3em + 6px);
+      z-index: 9999;
+      display: none;
+      width: 14em;
+      padding: .2em .7em;
+      background-color: #fff;
+
+      li {
+        padding: 0;
+
+        a {
+          display: block;
+          padding: .7em;
+          font-size: 1em;
+          color: $text-color;
+
+          &:hover {
+            color: $c123Color;
+          }
+
+          // TODO ?
+          &:not(:last-child) {
+            border-bottom: 1px solid #aaa;
+          }
         }
       }
     }
-    nav {
-      padding-top: 30px;
-      li {
-        padding-right: 0;
-        padding-left: 2em;
-        font-size: 1.3em;
+
+    > a + ul:hover,
+    > a:hover + ul {
+      display: block;
+    }
+  }
+}
+
+#header-main {
+  padding: 30px 1em 0;
+  a {
+    font-weight: normal;
+  }
+  .logo {
+    position: relative;
+    //display: block;
+    //width: 100px;
+    //height: 100px;
+    //background: url('/images/123completed-logo.png') 50% 50% no-repeat;
+    //background-size: contain;
+    //margin-bottom: 1em;
+    span {
+      height: 50px;
+      color: #fff;
+      &.one {
+        line-height: 50px;
+        font-size: 26px;
+        font-weight: bold;
+      }
+      &.completed {
+        line-height: 44px;
+        font-family: lane;
+        font-size: 37px;
       }
     }
   }
