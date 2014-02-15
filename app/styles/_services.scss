@@ -1,11 +1,12 @@
 .services {
 
   .global-services-map {
-    padding: $boxPad 0 0;
+    height: 400px;
+    padding: $boxPad;
 
     iframe {
       width: 100%;
-      height: 400px;
+      height: 100%;
       border: 0 none;
     }
   }

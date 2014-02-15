@@ -1,18 +1,32 @@
-<section class="services">
+<section class="services" ng-controller="ServicesCtrl">
 
-    <h1>Our Services</h1>
+    <h1>{{ model.title }}</h1>
+    <p>{{ model.excerpt }}</p>
 
-    <p>
-        1 2 3 Completed is known for its flexibility in leveraging the availability of its experts
-        according to the customer specific requirements. We have the ability to provide services either
-        offshore or onsite at customer's premises, all according to the customer availability and
-        financial preferences. 123 Completed leverages its R&amp;D Center to provide timely, cost effective
-        and high quality solutions, enabling customers to focus on their strategic business objectives.
-    </p>
+    <div class="global-services">
+        <h2>{{ model.globalServices.title }}</h2>
+        <p>{{ model.globalServices.excerpt }}</p>
 
-    <div class="global-services-map">
-        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                src="https://www.google.com/maps/ms?msa=0&amp;msid=201762555821246510096.0004e538a20e95f2b2269&amp;hl=en&amp;ie=UTF8&amp;ll=36.38711,8.745514&amp;spn=47.094341,261.892385&amp;t=m&amp;output=embed"></iframe>
+        <div class="global-services-map">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.google.com/maps/ms?msa=0&amp;msid=201762555821246510096.0004e538a20e95f2b2269&amp;hl=en&amp;ie=UTF8&amp;ll=36.38711,8.745514&amp;spn=47.094341,261.892385&amp;t=m&amp;output=embed"></iframe>
+        </div>
     </div>
+
+    <div class="engagement-models">
+        <h2>{{ model.engagementModels.title }}</h2>
+        <p>{{ model.engagementModels.excerpt }}</p>
+        <p>{{ model.servicesPrefix }}</p>
+
+        <div ng-repeat="service in model.services">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.excerpt }}</p>
+            <h4>{{ model.serviceDescriptionTitle }}</h4>
+            <p>{{ service.description }}</p>
+            <h4>{{ model.serviceReferencesTitle }}</h4>
+            <p>{{ service.references }}</p>
+        </div>
+    </div>
+
 
 </section>

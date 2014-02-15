@@ -4,8 +4,7 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/views/home.html',
-                controller: 'MainCtrl'
+                templateUrl: '/views/home.html'
             })
             .when('/:page', {
                 templateUrl: function (params) {
@@ -14,8 +13,7 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
                         return '/views/partials/' + params.page;
                     }
                     return '';
-                },
-                controller: 'MainCtrl'
+                }
             })
             .otherwise({
                 redirectTo: '/'

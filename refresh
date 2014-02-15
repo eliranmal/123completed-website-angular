@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo - - - - - npm install - - - - -
+npm install
+echo - - - - - npm prune - - - - -
+npm prune
+echo - - - - - npm cache clean - - - - -
+npm cache clean
+
+echo - - - - - grunt build - - - - -
+grunt build

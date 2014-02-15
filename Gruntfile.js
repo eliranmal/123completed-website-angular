@@ -30,14 +30,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
@@ -120,30 +112,6 @@ module.exports = function (grunt) {
                 '<%= yeoman.app %>/scripts/{,*/}*.js'
             ]
         },
-        coffee: {
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.app %>/scripts',
-                        src: '{,*/}*.coffee',
-                        dest: '.tmp/scripts',
-                        ext: '.js'
-                    }
-                ]
-            },
-            test: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'test/spec',
-                        src: '{,*/}*.coffee',
-                        dest: '.tmp/spec',
-                        ext: '.js'
-                    }
-                ]
-            }
-        },
         compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
@@ -171,13 +139,18 @@ module.exports = function (grunt) {
          dist: {}
          },*/
         rev: {
+//            img: ['images/**/*.png', '!images/staff/**/*.png'],
             dist: {
                 files: {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-                        '<%= yeoman.dist %>/styles/fonts/**/*.{svg,woff,eot,ttf}'
+                        [
+                            '<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                            '!<%= yeoman.dist %>/images/no-revision/**/*.{png,jpg,jpeg,gif,webp,svg}' // excluding
+                        ],
+                        '<%= yeoman.dist %>/styles/fonts/**/*.{svg,woff,eot,ttf,css}'
+//                        '<%= yeoman.dist %>/styles/fonts/**/*.*'
                     ]
                 }
             }
@@ -189,28 +162,18 @@ module.exports = function (grunt) {
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/**/*.html'],
+            html: ['<%= yeoman.dist %>/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/**/*.css'],
             options: {
-/*
-                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
-                patterns: {
-                    // FIXME While usemin won't have full support for revved files we have to put all references manually here
-                    js: [
-                        [/(customer-icon\.svg)/g, 'Replacing reference to customer-icon.png'],
-                        [/(iitail-logo\.svg)/g, 'Replacing reference to iitail-logo.png'],
-                        [/(no_image\.png)/g, 'Replacing reference to no_image.png'],
-                        [/(printer-iconx2\.png)/g, 'Replacing reference to printer-iconx2.png'],
-                        [/(email-iconx2\.png)/g, 'Replacing reference to email-iconx2.png'],
-                        [/(coins\.png)/g, 'Replacing reference to coins.png']
-                    ]
-*/
+//                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
                 dirs: ['<%= yeoman.dist %>']
             }
-
         },
         imagemin: {
             dist: {
+                options: {
+                    cache: false // working around an issue on v0.5.0: https://github.com/gruntjs/grunt-contrib-imagemin/issues/140
+                },
                 files: [
                     {
                         expand: true,
@@ -252,6 +215,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= yeoman.app %>',
                         src: ['*.html', 'views/**/*.html'],
+//                        src: ['{,*/**/}*.html', 'views/{,*/**/}*.html'],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -269,7 +233,7 @@ module.exports = function (grunt) {
                         src: [
                             '*.{ico,png,txt}',
                             '.htaccess',
-                            'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+//                            'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
                             'styles/fonts/**/*.{svg,woff,eot,ttf,css}',
                             'data/*.json'
                         ]
@@ -287,15 +251,12 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
-                'coffee:dist',
                 'compass:server'
             ],
             test: [
-                'coffee',
                 'compass'
             ],
             dist: [
-                'coffee',
                 'compass:dist',
                 'imagemin',
                 'htmlmin'
@@ -305,11 +266,6 @@ module.exports = function (grunt) {
             unit: {
                 configFile: 'karma.conf.js',
                 singleRun: true
-            }
-        },
-        cdnify: {
-            dist: {
-                html: ['<%= yeoman.dist %>/*.html']
             }
         },
         ngmin: {
@@ -380,7 +336,6 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'concat',
         'copy',
-        'cdnify',
         'ngmin',
         'cssmin',
         'uglify',

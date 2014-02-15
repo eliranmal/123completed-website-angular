@@ -10,9 +10,6 @@ angular.module('123CompletedWebsiteApp')
             },
             replace: true,
             link: function postLink(scope, element, attrs) {
-                scope.model = {
-                    collapsed: true
-                };
             }
         };
     });
