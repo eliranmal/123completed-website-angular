@@ -1,18 +1,18 @@
 #footer {
   position: relative;
-  background-color: $mainGradientTop;
+  background-color: $c-main-gradient-top;
   color: #cccccc;
   .row {
-    background-color: $mainGradientTop;
+    background-color: $c-main-gradient-top;
   }
   a {
     color: #cccccc;
   }
   [class*="col-"] {
-    margin-top: $boxPad;
-    height: $footerHeight - $boxPad * 2;
+    margin-top: $c-box-pad;
+    height: $c-footer-height - $c-box-pad * 2;
     &:not(:last-child) {
-      border-right: 1px solid $mainGradientBottom;
+      border-right: 1px solid $c-main-gradient-bottom;
     }
   }
   .website-meta {

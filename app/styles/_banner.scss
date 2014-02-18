@@ -18,16 +18,16 @@
     background-size: cover;
     @include opacity(.8);
   }
+
   .text {
-    top: 50%;
+    top: 70%;
     height: 30%;
     padding: 0 2em;
-    background-color: $c123Color;
+    background-color: $c-123-color;
     color: #fff;
     font: $font-size-large * 1.4 lane;
     line-height: 4;
-    text-shadow: -1px -1px 0 $mainGradientBottom;
     @include opacity(.8);
-    //@include gradient-radial($mainGradientBottom, transparent);
+    //@include gradient-radial($c-main-gradient-bottom, transparent);
   }
 }

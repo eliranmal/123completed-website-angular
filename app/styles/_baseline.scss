@@ -1,30 +1,51 @@
 
+/* background / foreground */
+
 body {
   //@include gradient-vertical(#002355,#3478aa);
   //@include gradient-vertical(#001642,#00467F);
-  @include gradient-vertical($mainGradientTop, $mainGradientBottom);
-  background-color: $mainGradientBottom;
+  @include gradient-vertical($c-main-gradient-top, $c-main-gradient-bottom);
+  background-color: $c-main-gradient-bottom;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-shadow: 1px 1px 0 #fff;
+
+#header,
+#footer {
+  a {
+    color: $c-link-composite-color;
+    font-weight: bold;
+    &:hover {
+      color: $c-link-composite-color-hover;
+    }
+  }
 }
+
+#header-top {
+  a {
+    color: $c-link-composite-color;
+  }
+}
+
+/* typography */
 
 h1 {
-  font-size: 160%;
-  //font-weight: bold;
+  font-size: $font-size-base * 1.8;
 }
 
 h2 {
-  font-size: 140%;
+  font-size: $font-size-base * 1.4;
 }
 
 h3 {
-  font-size: 115%;
+  font-size: $font-size-base * 1.15;
 }
 
 h4, h5, h6 {
-  font-size: 105%;
+  font-size: $font-size-base * 1.05;
+}
+
+#home h2 {
+  font-weight: bold;
 }
 
 a, a:link, a:visited, a:hover, a:active {
@@ -33,22 +54,13 @@ a, a:link, a:visited, a:hover, a:active {
   @include transition(color, text-shadow, .25s);
 }
 
-/* bootstrap specific */
-
-.list-inline.pull-right {
-  > li:last-child {
-    padding-right: 0;
-  }
-}
 
 #main {
   section {
     a {
       font-weight: bold;
-      text-shadow: 1px 1px 0 #ffffff;
     }
-    > h1 {
-      //padding: 1em 0 1.5em;
+    h1 {
       &:after {
         content: '';
         display: block;
@@ -56,5 +68,13 @@ a, a:link, a:visited, a:hover, a:active {
         border-bottom: 1px solid #ffffff;
       }
     }
+  }
+}
+
+/* bootstrap specific */
+
+.list-inline.pull-right {
+  > li:last-child {
+    padding-right: 0;
   }
 }

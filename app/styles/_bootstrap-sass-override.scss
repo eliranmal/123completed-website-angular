@@ -1,14 +1,16 @@
-/* variables */
 
-$body-bg: $mainGradientBottom;
-$text-color: #555;
-$link-color: $text-color;
-$link-hover-color: #4488d5;
-//$headings-color: #002355;
-$headings-color: #4488d5;
+/* variables
+-------------------------------------------------- */
+
+$body-bg: $c-main-gradient-bottom;
+$text-color: $c-text-main-color;
+$link-color: $c-main-gradient-bottom;
+$link-hover-color: $c-123-color;
+$headings-color: $c-123-color;
+
 $headings-font-weight: normal;
 $font-size-base: 18px;
 $font-family-base: district_prothin;
 $line-height-base: 1.5;
-$grid-gutter-width: $boxPad * .9;
+$grid-gutter-width: $c-box-pad * .9;
 

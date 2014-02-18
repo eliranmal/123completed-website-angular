@@ -1,14 +1,14 @@
 
-$images-path: '/images';
+$c-images-path: '/images';
 
-$img-email: '#{$images-path}/icons/email.png';
-$img-linkedin: '#{$images-path}/icons/linkedin.png';
+$c-img-email: '#{$c-images-path}/icons/email.png';
+$c-img-linkedin: '#{$c-images-path}/icons/linkedin.png';
 
 [class*="icon-"] {
   &[class*="-email"] {
-    background-image: url('#{$img-email}');
+    background-image: url('#{$c-img-email}');
   }
   &[class*="-linkedin"] {
-    background-image: url('#{$img-linkedin}');
+    background-image: url('#{$c-img-linkedin}');
   }
 }

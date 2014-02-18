@@ -1,11 +1,11 @@
 
 /* common */
 @import "fonts";
+@import "colors";
+@import "images";
 @import "variables";
 @import "functions";
-@import "images";
-@import "colors";
-/* sass definitions overrides */
+/* sass overrides */
 @import "bootstrap-sass-override";
 /* libs */
 @import "bootstrap-sass/lib/bootstrap";
@@ -17,6 +17,7 @@
 @import "header";
 @import "footer";
 @import "homepage";
+@import "main-navigation";
 @import "banner";
 @import "acknowledgments";
 @import "staff";

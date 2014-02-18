@@ -1,14 +1,12 @@
 // TODO encapsulate all partials to prevent the use of !important - use the rule order
 .acknowledgments-box {
-  background-color: #d3d3d3 !important;
 
   .acknowledgments-ticker {
 
     * {
       font-size: $font-size-large;
       font-weight: bold;
-      color: $mainGradientBottom;
-      text-shadow: 1px 1px 0 #fff;
+      color: $c-main-gradient-bottom;
     }
     .quote {
       padding: 0;

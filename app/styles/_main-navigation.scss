@@ -1,0 +1,52 @@
+#main-nav {
+  padding-top: 30px;
+  ul > li {
+    position: relative;
+    padding: 0 0 0 2em;
+
+    > a {
+      padding-bottom: 6px;
+      font-size: 1.3em;
+      line-height: 1;
+      // TODO active state
+      /*      &.active {
+              border-bottom: 1px solid $c-123-color;
+            }*/
+    }
+
+    > a + ul {
+      position: absolute;
+      top: calc(1.3em + 6px);
+      z-index: 9999;
+      display: none;
+      width: 14em;
+      padding: .2em .7em;
+      background-color: #fff;
+
+      li {
+        padding: 0;
+
+        a {
+          display: block;
+          padding: .7em;
+          font-size: 1em;
+          color: $text-color;
+
+          &:hover {
+            color: $c-123-color;
+          }
+
+          // TODO ?
+          &:not(:last-child) {
+            border-bottom: 1px solid #aaa;
+          }
+        }
+      }
+    }
+
+    > a + ul:hover,
+    > a:hover + ul {
+      display: block;
+    }
+  }
+}

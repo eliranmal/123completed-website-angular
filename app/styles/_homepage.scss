@@ -1,10 +1,18 @@
 #home {
 
-  .services-list {
-    line-height: 2.7;
-    li {
-      &:not(:last-child) {
-        border-bottom: 1px solid #cccccc;
+  .home-link {
+    font-weight: bold;
+    color: $c-123-color;
+  }
+
+  .what-we-do {
+
+    .services-list {
+      line-height: 2.6;
+      li {
+        &:not(:last-child) {
+          border-bottom: 1px solid #ffffff;
+        }
       }
     }
   }
