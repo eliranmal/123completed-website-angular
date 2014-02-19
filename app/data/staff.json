@@ -1,5 +1,6 @@
 [
     {
+        "id": "member-eyal-rubin",
         "name": "Eyal Rubin",
         "jobTitle": "Founder, CEO",
         "body": "Eyal Rubin has been the Founder and Chief Executive Officer of 123 Completed since January 2009. Eyal brings more than 20 years of experience in enterprise application infrastructures and professional services. Eyal Co-founded Transparency software and served as VP Reaserch and Development and CTO of Transparency Software. Eyal Co-founded and served as CEO of 2Train4 INC (acquired by eWave). Eyal is a recognized visionary leader, entrepreneur, inventor, enterprise software leading consultant, a top Oracle &amp; J2EE expert and instructor for leading edge technology companies. Eyal is an expert in managing technically complex projects, complex enterprise system architectures and enterprise monitoring systems for performance, security and compliance. Eyal established powerful partnerships and provided services and strategic technology consultancy to more than 100 accounts. As part of Eyal's customer and partner list you can find: Oracle, Mercury Interactive (acquired by HP) , Cisco Systems, Computer Associates, HP, BEA systems (acquired by Oracle), Sun Microsystems (acquired by Oracle), Amdocs (NYSE: DOX), Comverse Technologies and many others. Eyal earned his Computer Science and Economics Degree in Bar-Ilan University, Israel.",
@@ -8,6 +9,7 @@
         "imagePath": "/images/no-revision/staff/eyal-rubin.png"
     },
     {
+        "id": "member-alon-strikovsky",
         "name": "Alon Strikovsky",
         "jobTitle": "VP Professional Services",
         "body": "Alon brings more than 27 years of experience in the IT industries. In the past years as VP R&D position Alon was responsible for developing and managing a J2EE and Web applications based on Linux and Oracle environment. Alon has worked intensively on establishing financial and credit card product systems worldwide. In his prior position, Alon managed for several years the R&D department of the largest credit card company in Israel. Alon has large experience in the credit card market. In his years of experience Alon developed, led and managed financial product and credit card products, retail, accounting systems and shop floor control systems. Alon has worked for 6 years on leading projects in the United States and has over 15 years of experience in developing using complex enterprises systems and variety of operation systems. Alon brings to 1 2 3 Completed years of management experience, system analysis capabilities, and experience in leading R&D teams, worldwide project leading and years of experience in system implementation. Alon has BA degree in business Administration from Newport University, California.",
@@ -16,6 +18,7 @@
         "imagePath": "/images/no-revision/staff/alon-strikovsky.jpg"
     },
     {
+        "id": "member-shadi-massalha",
         "name": "Shadi Massalha",
         "jobTitle": "Chief Architect",
         "body": "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.",
@@ -24,6 +27,7 @@
         "imagePath": "/images/no-revision/staff/shadi-massalha.png"
     },
     {
+        "id": "member-eliran-malka",
         "name": "Eliran Malka",
         "jobTitle": "Web Specialist",
         "body": "Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.",

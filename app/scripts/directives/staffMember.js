@@ -8,8 +8,6 @@ angular.module('123CompletedWebsiteApp')
             scope: {
                 'data': '=memberData'
             },
-            replace: true,
-            link: function postLink(scope, element, attrs) {
-            }
+            replace: true
         };
     });

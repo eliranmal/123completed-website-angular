@@ -3,14 +3,14 @@
     "excerpt": "Established in 2009, 123Completed specializes in delivering complex software project and consultancy with more than 50 engagements worldwide in year 2013 alone and is proud of having numerous happy customers, In Israel and world wide. 123Completed is seeking for new opportunities in the enterprise software domain. We are supporting the most demanding enterprises out there, with services in the areas of extreme transaction processing, cloud computing, Application Lifecycle Management, DB downsizing, Web and Mobile development as well as many other activities.",
     "globalServices": {
         "title": "Global Services",
-        "excerpt": "123Completed consultants are supporting and providing services worldwide, we travel as required by our customers and support or customer’s strategic customers as well. The following is a map representing our services provided at customer sites worldwide."
+        "excerpt": "123Completed consultants are supporting and providing services worldwide, we travel as required by our customers and support or customer’s strategic customers as well.",
+        "prefix": "The following is a map representing our services provided at customer sites worldwide."
     },
     "engagementModels": {
         "title": "Engagement Models",
         "excerpt": "123Completed is flexible in meeting all engagement models type as suitable by the customer. Payment can be based on hourly, daily, weekly, monthly or fixed for the project or milestone. Work can be done on customer premises or 123completed office."
     },
     "servicesPrefix": "The following is a partial list that describes our services, world wide experience and references:",
-    "serviceDescriptionTitle": "Service Description",
     "serviceReferencesTitle": "References",
     "services": [
         {

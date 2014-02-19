@@ -3,6 +3,7 @@ $c-images-path: '/images';
 
 $c-img-email: '#{$c-images-path}/icons/email.png';
 $c-img-linkedin: '#{$c-images-path}/icons/linkedin.png';
+$c-img-loading: '#{$c-images-path}/loading.gif';
 
 [class*="icon-"] {
   &[class*="-email"] {
@@ -11,4 +12,9 @@ $c-img-linkedin: '#{$c-images-path}/icons/linkedin.png';
   &[class*="-linkedin"] {
     background-image: url('#{$c-img-linkedin}');
   }
+}
+
+.loading {
+  background: url('#{$c-img-loading}') 50% 50% no-repeat;
+  background-size: contain;
 }

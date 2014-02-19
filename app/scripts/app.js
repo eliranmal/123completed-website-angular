@@ -22,4 +22,9 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
         $locationProvider.html5Mode(true);
     }])
 
-    .run(['$route', angular.noop]);
+    .run(['$route', '$rootScope', '$location', '$anchorScroll', '$routeParams', function($route, $rootScope, $location, $anchorScroll, $routeParams) {
+        $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+            $location.hash($routeParams.scrollTo);
+            $anchorScroll();
+        });
+    }]);

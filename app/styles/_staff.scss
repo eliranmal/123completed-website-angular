@@ -3,9 +3,7 @@
 
   .member {
     position: relative;
-    //margin: $c-box-pad * 1.5 $c-box-pad $c-box-pad * .5;
-    //padding: $c-box-pad * .75 $c-box-pad * .75 $c-box-pad * .25 + 32px;
-    margin: $grid-gutter-width 0 $grid-gutter-width * .5;
+    margin: 0 0 $grid-gutter-width;
     padding: $c-box-pad;
     border: 1px solid #eee;
     background-color: #f6f6f6;

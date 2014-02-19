@@ -17,15 +17,16 @@ angular.module('123CompletedWebsiteApp')
                     var list = angular.element('<ul></ul>');
                     if (toplevel) {
                         list.addClass('list-inline pull-right');
+                    } else {
+                        list.addClass('list-unstyled')
                     }
                     el.append(list);
 
                     angular.forEach(nodes, function (n) {
-                        var listItem = angular.element(
-                            '<li>' +
-                                '<a tabindex="' + n.tabindex + '" href="' + n.link + '">' + n.label + '</a>' +
-                            '</li>'
-                        );
+                        var listItem = angular.element('<li></li>');
+                        var anchor = angular.element('<a tabindex="' + n.tabindex + '">' + n.label + '</a>');
+                        listItem.append(anchor);
+                        n.link && anchor.attr('href', n.link);
 
                         if (n.children && n.children.length) {
                             // recursive call for nested levels
@@ -45,20 +46,18 @@ angular.module('123CompletedWebsiteApp')
                     model: [
                         {
                             label: 'Services',
-                            link: '/services.html',
+//                            link: '/services.html',
                             tabindex: 11,
                             children: [
                                 {
                                     label: 'Global Services',
-                                    link: '#',
-                                    tabindex: 21,
-                                    children: null
+                                    link: '/global-services.html',
+                                    tabindex: 21
                                 },
                                 {
                                     label: 'Engagement Models',
-                                    link: '#',
-                                    tabindex: 22,
-                                    children: null
+                                    link: '/engagement-models.html',
+                                    tabindex: 22
                                 }
 
                             ]
@@ -66,26 +65,22 @@ angular.module('123CompletedWebsiteApp')
                         {
                             label: 'Training',
                             link: '/training.html',
-                            tabindex: 12,
-                            children: null
+                            tabindex: 12
                         },
                         {
                             label: 'Business Relations',
                             link: '/business-relations.html',
-                            tabindex: 13,
-                            children: null
+                            tabindex: 13
                         },
                         {
                             label: 'Management',
                             link: '/staff.html',
-                            tabindex: 14,
-                            children: null
+                            tabindex: 14
                         },
                         {
                             label: 'Contact',
                             link: '/contact-us.html',
-                            tabindex: 15,
-                            children: null
+                            tabindex: 15
                         }
                     ]
                 });

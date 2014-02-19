@@ -15,25 +15,6 @@ body {
   height: $c-footer-height;
 }
 
-/* customization */
-
-#wrap:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $c-header-top-height;
-  border-bottom: 1px solid $c-main-gradient-bottom;
-}
-
-#header-top {
-  height: $c-header-top-height;
-  line-height: $c-header-top-height;
-}
-
-
-
 /* TODO make more specific, so it would apply only to layout boxes */
 #main {
   section {

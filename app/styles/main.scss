@@ -10,8 +10,8 @@
 /* libs */
 @import "bootstrap-sass/lib/bootstrap";
 //@import "../bower_components/font-awesome/scss/font-awesome"; // TODO test font awesome and utilize it
-/* baseline styles */
-@import "baseline";
+/* common styles */
+@import "common";
 /* partials */
 @import "layout";
 @import "header";
