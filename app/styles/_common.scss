@@ -1,12 +1,6 @@
 
 /* baseline styles */
 
-body {
-  //@include gradient-vertical($c-main-gradient-top, $c-main-gradient-bottom);
-  background-color: $c-main-gradient-bottom;
-}
-
-
 #header,
 #footer {
   a {
@@ -28,7 +22,7 @@ body {
 
 h1 {
   font-size: $font-size-base * 1.8;
-  margin-bottom: 1em;
+  //margin-bottom: 1em;
 }
 
 h2 {
@@ -53,7 +47,6 @@ a, a:link, a:visited, a:hover, a:active, a:focus {
   @include transition(color, text-shadow, .25s);
 }
 
-
 #main {
   section {
     a {
@@ -73,7 +66,7 @@ a, a:link, a:visited, a:hover, a:active, a:focus {
 /* generic components */
 
 .island {
-  padding: .5em 2em;
+  padding: 1.5em 2em .5em;
   font-size: $font-size-base * 1.2;
 }
 

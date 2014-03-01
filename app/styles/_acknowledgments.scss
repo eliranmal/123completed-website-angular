@@ -6,7 +6,7 @@
     * {
       font-size: $font-size-large;
       font-weight: bold;
-      color: $c-main-gradient-bottom;
+      color: $c-header-main-bg;
     }
     .quote {
       padding: 0;
@@ -15,6 +15,7 @@
       font-size: .9em;
       line-height: 1.7;
       font-family: lane, sans-serif;
+      text-align: left;
       letter-spacing: .04em;
     }
     .ref {

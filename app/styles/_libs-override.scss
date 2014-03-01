@@ -1,10 +1,10 @@
 
-/* variables
+/* bootstrap-sass
 -------------------------------------------------- */
 
-$body-bg: $c-main-gradient-bottom;
+$body-bg: $c-body-bg;
 $text-color: $c-text-main-color;
-$link-color: $c-main-gradient-bottom;
+$link-color: $c-header-main-bg;
 $link-hover-color: $c-123-color;
 $headings-color: $c-123-color;
 
@@ -14,3 +14,10 @@ $font-family-base: district_prothin;
 $line-height-base: 1.5;
 $grid-gutter-width: $c-box-pad * .9;
 
+
+/* bootstrap-ui
+------------------------------------------------- */
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}

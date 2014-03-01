@@ -1,40 +1,44 @@
-<section class="staff" ng-controller="StaffCtrl">
+<div class="container">
 
-    <h1>Management</h1>
+    <section class="staff" ng-controller="StaffCtrl">
 
-<!--
-    <div masonry column-width="{{ columnWidth }}">
-        <div class="masonry-brick" 
-             ng-repeat="member in model.members"
-             ng-class="{ expanded: member.expanded }"
-             ng-click="expand(member)">
-            <staff-member member-data="member"></staff-member>
-        </div>
-    </div>
--->
+        <h1>Management</h1>
+
+        <!--
+            <div masonry column-width="{{ columnWidth }}">
+                <div class="masonry-brick"
+                     ng-repeat="member in model.members"
+                     ng-class="{ expanded: member.expanded }"
+                     ng-click="expand(member)">
+                    <staff-member member-data="member"></staff-member>
+                </div>
+            </div>
+        -->
 
 
-    <div class="row">
-        <div class="col-md-6">
-            <staff-member ng-repeat="member in model.members"
-                          member-data="member"
-                          ng-if="$even"></staff-member>
-        </div>
-        <div class="col-md-6">
-            <staff-member ng-repeat="member in model.members"
-                          member-data="member"
-                          ng-if="$odd"></staff-member>
-        </div>
-    </div>
-
-    <!--
         <div class="row">
             <div class="col-md-6">
-                <staff-member key="eyalRubin"></staff-member>
+                <staff-member ng-repeat="member in model.members"
+                              member-data="member"
+                              ng-if="$even"></staff-member>
             </div>
             <div class="col-md-6">
-                <staff-member key="alonStrikovsky"></staff-member>
+                <staff-member ng-repeat="member in model.members"
+                              member-data="member"
+                              ng-if="$odd"></staff-member>
             </div>
         </div>
-    -->
-</section>
+
+        <!--
+            <div class="row">
+                <div class="col-md-6">
+                    <staff-member key="eyalRubin"></staff-member>
+                </div>
+                <div class="col-md-6">
+                    <staff-member key="alonStrikovsky"></staff-member>
+                </div>
+            </div>
+        -->
+    </section>
+
+</div>

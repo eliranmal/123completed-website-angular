@@ -1,6 +1,17 @@
 #main-nav {
   padding-top: 30px;
-  ul > li {
+
+  // lists at any level
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  // top level: this is the horizontal menu
+  > ul > li {
     position: relative;
     padding: 0 0 0 2em;
 
@@ -14,32 +25,35 @@
             }*/
     }
 
+    // second level lists: dropdown menus
     > a + ul {
       position: absolute;
       top: calc(1.3em + 6px);
       z-index: 9999;
       display: none;
-      width: 14em;
-      padding: .2em .7em;
-      background-color: #fff;
+      width: 20em;
+      padding: 1em 1.5em;
+      background-color: $c-composite-color;
+      box-shadow: 1px 1px 6px $c-shadow-color;
 
       li {
-        padding: 0;
 
         a {
           display: block;
-          padding: .7em;
+          padding: .2em 0;
           font-size: 1em;
-          color: $text-color;
+          font-weight: bold;
+          color: $link-color;
 
           &:hover {
-            color: $c-123-color;
+            color: $link-hover-color;
           }
+        }
 
-          // TODO ?
-          &:not(:last-child) {
-            border-bottom: 1px solid #aaa;
-          }
+        // any list but the dropdown menus level
+        ul {
+          padding: 0 1em;
+          border-top: 1px solid #aaa;
         }
       }
     }

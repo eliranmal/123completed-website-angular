@@ -10,53 +10,69 @@
         "title": "Engagement Models",
         "excerpt": "123Completed is flexible in meeting all engagement models type as suitable by the customer. Payment can be based on hourly, daily, weekly, monthly or fixed for the project or milestone. Work can be done on customer premises or 123completed office."
     },
-    "servicesPrefix": "The following is a partial list that describes our services, world wide experience and references:",
+    "servicesPrefix": "The following is a partial list that describes our services, world wide experience and references.",
     "serviceReferencesTitle": "References",
     "services": [
         {
+            "id": "service-etp",
             "title": "Designing and Implementing Extreme Transaction Processing Systems",
+            "shortTitle": "Extreme Transaction Processing",
             "excerpt": "123Completed assist organizations in designing and implementing systems in need of millions of transactions per second. 123Completed utilizes best of practice methodology as well as top of the line solutions such as In Memory Data Grids (for example GigaSpaces XAP), NOSQL DBs such as Mongo DB and Cassandra.",
             "description": "Design and implement a scalable engine to support any type of extreme transaction processing need. We also offer training in this domain worldwide.",
             "references": "HP, SIX (Swiss Stock Exchange), UBS, Avaya, Cisco, VMware, Early Warning and many others."
         },
         {
+            "id": "service-devops",
             "title": "Application Lifecycle Management, DevOps",
+            "shortTitle": "ALM / DevOps",
             "excerpt": "123Completed assist organization in implementing a fully automatic ALM solution based on best of breed solutions from the open source community and the industry world. We utilize Puppet and Chef as well as CA Lisa Release Automation and GigaSpaces Cloudify and supporting solutions.",
             "description": "Design and implement an automated lifecycle management solutions. We also offer training in this domain worldwide.",
-            "references": "ING, Alcatel, CA, T-Mobile, 888 and many others…"
+            "references": "ING, Alcatel, CA, T-Mobile, 888 and many others."
         },
         {
+            "id": "service-db-tuning",
             "title": "Database Tuning, Downsizing/Right Sizing and ETL projects",
+            "shortTitle": "Database Tuning / ETL",
             "excerpt": "123Completed database experts have performed numerous DB migrations as well as ETL (Extract Transform Load) projects and has unique IP in that domain. We can migrate from any platform to any requested platform. Examples: migrations from Oracle to Postgres, MySQL to Postgres, DB2 to Oracle and vice versa, MS SQLServer to Mongo DB, Cassandra to Mongo DB. The migration includes data model plus any procedural (and triggers) requirements including all required modifications on application side.",
             "description": "Analyzing current DB requirements and migrating to requested platform while meeting customer performance and other requirements. We are experts on Oracle, MS SQLServer, Postgres, vPostgres (VMware Postgres for VMs), Oracle MySQL, Mongo DB , Cassandra.",
-            "references": "GigaSpaces, VMware, HP, Med-Trix and many others…"
+            "references": "GigaSpaces, VMware, HP, Med-Trix and many others."
         },
         {
+            "id": "service-cloud-enablement",
             "title": "Cloud Enablement and OpenStack",
+            "shortTitle": "Cloud Enablement / OpenStack",
             "excerpt": "123Completed Cloud experts are assisting R&D as well as IT organization in migrating or extending their infrastructure to the cloud. 123Completed works with cloud enablement vendors in order to extend their product capabilities. We are in partnership with GigaSpaces, VMware, Oracle and CA and assist them in their product development effort. Our experts are well trained and experienced with OpenStack, Puppet, Chef, VMWare solution stack, GigaSpaces Cloudify as well as supporting technologies.",
             "description": "Design & Implementation a migration process to the cloud and building cloud infrastructure.",
             "references": "GigaSpaces, Alcatel and many others."
         },
         {
+            "id": "service-application-server",
             "title": "JEE/Spring Application Server Projects/Migration",
+            "shortTitle": "Application Server Migration",
             "excerpt": "123Completed application server and JEE experts are capable in migrating applications from any application server to any other application server and while performing that, provide a list of recommended changes for allowing easy migrations to any application server in the future. We are most likely one of the most experienced application server migration experts out there. With expert that have over 15 years of experience with Oracle WebLogic, IBM WebSphere, JBoss, Tomcat, Jetty and similar application servers as well as experience in Spring platform.",
             "description": "Analyzing current Application and current application server usage of Proprietary features, performing the migration while keeping current customer requirements from the application.",
             "references": "Among our customers and organizations that benefit from our service you may find: HP, Oracle as well as many Oracle customers."
         },
         {
-            "title": "Java/.NET/PYTHON/PHP project development",
+            "id": "service-project-development",
+            "title": "Java/.NET/PYTHON/PHP Project Development",
+            "shortTitle": "Project Development",
             "excerpt": "123Completed consultants are joining our customers R&D teams effort in delivering superior projects that are included in leading solutions.",
             "description": "Joining our customers R&D effort by delivering a project from end to end or by providing staff augmentation services.",
-            "references": "GigaSpaces, VMWare, CA, Pontis, Conduit and similar…"
+            "references": "GigaSpaces, VMWare, CA, Pontis, Conduit and similar."
         },
         {
+            "id": "service-web-development",
             "title": "Web Development",
+            "shortTitle": "Web Development",
             "excerpt": "123Completed consultants use the most advanced web technologies and assist R&D companies in building their next web dashboards and products. Among the technologies we master you may find AngularJS, HTML5, Jquery and GWT",
             "description": "Joining our customers R&D effort by delivering a web project",
             "references": "GigaSpaces, Correlsense"
         },
         {
+            "id": "service-mobile-development",
             "title": "Mobile Development",
+            "shortTitle": "Mobile Development",
             "excerpt": "123completed mobile application development process is both efficient and cost-effective. 123completed builds the most efficient viable product possible to get you in business quickly—and afford-ably, using generic frameworks where possible, but can go native as well when required. 123Completed has experience in development of mobile application working as standalone or client server mode. We have experience working with different mobile technologies such as utilizing Location APIs.",
             "description": "123completed works in agile development methodologies that eliminates the waste from the process of iPhone, iPad, and Android app development—saving you time, money, and resources.",
             "references": "Conduit, ARX as well as many startups in stealth mode."

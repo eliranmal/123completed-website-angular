@@ -10,11 +10,36 @@ $c-box-pad: 32px;
 /* colors
 -------------------------------------------------- */
 
+/*
 $c-composite-color: $c-color-base-05;
 $c-shadow-color: $c-color-base-04;
 $c-123-color: $c-color-base-01;
-$c-main-gradient-top: $c-color-base-03;
-$c-main-gradient-bottom: $c-color-base-02;
+$c-header-top-bg: $c-color-base-03;
+$c-header-main-bg: $c-color-base-03;
+$c-header-bottom-bg: $c-color-base-03;
+$c-body-bg: $c-color-base-03;
+$c-footer-bg: $c-color-base-08;
+$c-ticker-bg: transparent;
 $c-text-main-color: $c-color-base-04;
-$c-link-composite-color: $c-color-base-06;
+$c-link-composite-color: white;
 $c-link-composite-color-hover: $c-color-base-07;
+$c-box-color: $c-color-base-05;
+*/
+
+
+$c-composite-color: $c-color-base-05;
+$c-shadow-color: $c-color-base-04;
+$c-123-color: $c-color-base-01;
+$c-header-top-bg: $c-color-base-09;
+//$c-header-main-bg: #9195A6;
+$c-header-main-bg: $c-color-base-08;
+$c-header-bottom-bg: #f2f2f2;
+$c-body-bg: #f2f2f2;
+//$c-body-bg: #9195A6;
+$c-footer-bg: $c-color-base-03;
+//$c-footer-bg: silver;
+$c-ticker-bg: transparent;
+$c-text-main-color: $c-color-base-04;
+$c-link-composite-color: white;
+$c-link-composite-color-hover: $c-color-base-07;
+$c-box-color: #f2f2f2;

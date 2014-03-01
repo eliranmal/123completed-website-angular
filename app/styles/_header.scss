@@ -1,52 +1,35 @@
 #header {
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: $c-header-top-height;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 160px;
+    background-color: $c-header-bottom-bg;
+  }
 }
-
-
-#wrap:before,
-#wrap:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#wrap:before {
-  z-index: 0;
-  height: $c-header-top-height;
-}
-
-#wrap:after {
-  z-index: -1;
-  height: 220px;
-}
-
-#wrap:before,
-#wrap:after,
-#header-top {
-  //background-color: $c-main-gradient-bottom;
-  background-color: $c-color-base-08;
-}
-
-#wrap:before,
-#header-top {
-  border-bottom: 1px solid $c-main-gradient-bottom;
-}
-
 
 #header-top {
   height: $c-header-top-height;
   line-height: $c-header-top-height;
+  background-color: $c-header-top-bg;
+  border-bottom: 1px solid $c-footer-bg;
 }
 
 #header-main {
-  padding: 30px 0 0;
+  //padding: 30px 0 0;
+  padding: 20px 0 40px;
+  background-color: $c-header-main-bg;
   a {
     font-weight: normal;
   }
   .logo {
     position: relative;
+    top: .9em;
     //background: url('/images/123completed-logo.png') 50% 50% no-repeat;
     //background-size: contain;
     span {

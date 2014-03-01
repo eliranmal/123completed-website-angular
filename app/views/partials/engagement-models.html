@@ -1,19 +1,26 @@
-<section class="services" ng-controller="ServicesCtrl">
-    <div class="engagement-models">
-        <h1>{{ model.engagementModels.title }}</h1>
-        <div class="island">
-            <p>{{ model.engagementModels.excerpt }}</p>
-            <p>{{ model.servicesPrefix }}</p>
-        </div>
-        <div ng-repeat="service in model.services">
-            <h2>{{ service.title }}</h2>
-            <div class="row">
-                <div class="col-md-8">
-                    <p>{{ service.excerpt }}</p>
-                    <p><b>{{ model.serviceReferencesTitle }}: </b>{{ service.references }}</p>
+<div class="container">
+    <section class="services" ng-controller="ServicesCtrl">
+
+        <div class="engagement-models">
+            <h1>{{ model.engagementModels.title }}</h1>
+
+            <div class="island">
+                <p>{{ model.engagementModels.excerpt }}</p>
+
+                <p>{{ model.servicesPrefix }}</p>
+            </div>
+            <div ng-repeat="service in model.services" id="{{ service.id }}">
+                <h2>{{ service.title }}</h2>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>{{ service.excerpt }}</p>
+
+                        <p><b>{{ model.serviceReferencesTitle }}: </b>{{ service.references }}</p>
+                    </div>
+                    <p class="col-md-4 service-description island">{{ service.description }}</p>
                 </div>
-                <p class="col-md-4 service-description">{{ service.description }}</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

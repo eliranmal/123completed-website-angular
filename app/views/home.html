@@ -1,38 +1,37 @@
+
+<div id="ticker">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
+            </div>
+            <div class="col-md-8">
+                <banner></banner>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="home">
 
-    <div class="row">
-        <div class="col-md-8">
-            <section class="banner">
-                <div class="photo"></div>
-                <div class="text">We're the bestest!</div>
-            </section>
-<!--
-            <section class="acknowledgments-box">
-                &lt;!&ndash;<div acknowledgments></div>&ndash;&gt;
-            </section>
--->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <section ng-include="'views/partials/who-we-are.html'"></section>
+            </div>
+            <div class="col-md-4">
+                <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
+            </div>
+            <div class="col-md-4">
+                <section class="acknowledgments-box">
+                    <h2>Our customers say</h2>
+                    <div acknowledgments></div>
+                </section>
+            </div>
         </div>
-        <div class="col-md-4">
-            <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <section ng-include="'views/partials/who-we-are.html'"></section>
+        <div class="row">
+            <!--<div class="col-md-8" ng-include="'views/partials/technologies.html'"></div>-->
         </div>
-        <div class="col-md-4">
-            <section></section>
-        </div>
-        <div class="col-md-4">
-            <section class="acknowledgments-box">
-                <h2>Our customers say</h2>
-                <div acknowledgments></div>
-            </section>
-        </div>
-    </div>
-
-    <div class="row">
-        <!--<div class="col-md-8" ng-include="'views/partials/technologies.html'"></div>-->
     </div>
 </div>

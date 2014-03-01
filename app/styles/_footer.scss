@@ -1,9 +1,9 @@
 #footer {
   position: relative;
-  background-color: $c-main-gradient-top;
+  background-color: $c-footer-bg;
   color: #cccccc;
   .row {
-    background-color: $c-main-gradient-top;
+    background-color: $c-footer-bg;
   }
   a {
     color: #cccccc;
@@ -12,7 +12,7 @@
     margin-top: $c-box-pad;
     height: $c-footer-height - $c-box-pad * 2;
     &:not(:last-child) {
-      border-right: 1px solid $c-main-gradient-bottom;
+      border-right: 1px solid $c-header-main-bg;
     }
   }
   .website-meta {

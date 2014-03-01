@@ -17,12 +17,17 @@ body {
 
 /* TODO make more specific, so it would apply only to layout boxes */
 #main {
+  > div {
+    margin-top: $c-box-pad;
+    //padding-bottom: $c-box-pad;
+    margin-bottom: $c-box-pad;
+    //background-color: $c-box-color;
+  }
   section {
     min-height: $c-tile-height;
-    margin-bottom: $grid-gutter-width;
+    //margin-bottom: $grid-gutter-width;
     padding: $c-box-pad / 2 $c-box-pad + 12 $c-box-pad + 12;
-    background-color: $c-composite-color;
-    //background-color: #008dc6;
+    background-color: $c-box-color;
   }
 }
 

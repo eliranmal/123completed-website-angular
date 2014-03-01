@@ -1,18 +1,26 @@
+#ticker,
 #home {
+}
 
-  .home-link {
-    font-weight: bold;
-    color: $c-123-color;
-  }
+#ticker {
+  background-color: $c-ticker-bg;
+}
 
-  .what-we-do {
+#home {
+}
 
-    .services-list {
-      line-height: 2.6;
-      li {
-        &:not(:last-child) {
-          border-bottom: 1px solid #ffffff;
-        }
+.home-link {
+  font-weight: bold;
+  color: $c-123-color;
+}
+
+.what-we-do {
+
+  .services-list {
+    line-height: 2.6;
+    li {
+      &:not(:last-child) {
+        border-bottom: 1px solid #ffffff;
       }
     }
   }

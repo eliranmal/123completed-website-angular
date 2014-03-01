@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('123CompletedWebsiteApp')
-    .directive('mainNavigation', function () {
+    .directive('mainNavigation', function ($resource) {
         return {
             template: '<nav id="main-nav"></nav>',
             restrict: 'E',
@@ -18,7 +18,7 @@ angular.module('123CompletedWebsiteApp')
                     if (toplevel) {
                         list.addClass('list-inline pull-right');
                     } else {
-                        list.addClass('list-unstyled')
+//                        list.addClass('list-unstyled')
                     }
                     el.append(list);
 
@@ -37,12 +37,19 @@ angular.module('123CompletedWebsiteApp')
                     });
                 }
 
-                buildNavigationTree(element, scope.model, true);
+                scope.$watch('model', function (newValue) {
+                    newValue && buildNavigationTree(element, newValue, true);
+                });
 
             },
             controller: function ($scope) {
 
-                angular.extend($scope, {
+                var scope,
+                    engagementModels = [],
+                    services,
+                    modelTabIndex = 31;
+
+                scope = {
                     model: [
                         {
                             label: 'Services',
@@ -57,7 +64,8 @@ angular.module('123CompletedWebsiteApp')
                                 {
                                     label: 'Engagement Models',
                                     link: '/engagement-models.html',
-                                    tabindex: 22
+                                    tabindex: 22,
+                                    children: engagementModels
                                 }
 
                             ]
@@ -83,7 +91,22 @@ angular.module('123CompletedWebsiteApp')
                             tabindex: 15
                         }
                     ]
+                };
+
+                $resource('data/services.json').get(function (d) {
+
+                    services = d.services;
+                    services && angular.forEach(services, function (s) {
+                        engagementModels.push({
+                            label: s.shortTitle,
+                            link: '/engagement-models.html#' + s.id,
+                            tabindex: modelTabIndex++
+                        });
+                    });
+
+                    angular.extend($scope, scope);
                 });
+
             }
         };
     });

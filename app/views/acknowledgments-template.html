@@ -1,8 +1,16 @@
 <div class="acknowledgments-ticker">
+    <carousel interval="interval">
+        <slide ng-repeat="datum in data" active="slide.active">
+            <blockquote class="quote">{{ datum.quote }}</blockquote>
+            <p class="ref">{{ datum.ref }}</p>
+        </slide>
+    </carousel>
+<!--
     <ul rn-carousel rn-carousel-buffered rn-carousel-index="slideIndex" class="list-unstyled">
         <li ng-repeat="datum in data">
             <blockquote class="quote">{{ datum.quote }}</blockquote>
             <p class="ref">{{ datum.ref }}</p>
         </li>
     </ul>
+-->
 </div>
