@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
+                <section ng-include="'views/partials/who-we-are.html'"></section>
             </div>
             <div class="col-md-8">
                 <banner></banner>
@@ -24,14 +24,18 @@
                 </section>
             </div>
             <div class="col-md-4">
-                <section ng-include="'views/partials/who-we-are.html'"></section>
+                <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
             </div>
         </div>
 
         <div class="row">
-            <!--<div class="col-md-8" ng-include="'views/partials/technologies.html'"></div>-->
+            <div class="col-md-12">
+                <section class="technologies-box">
+                    <h2>What We Use</h2>
+                    <technologies></technologies>
+                    <a class="home-link pull-right" href="/technology-domain.html#wrap">Learn more</a>
+                </section>
+            </div>
         </div>
     </div>
-
-    <!--<a popover-placement="bottom" popover="I appeared on mouse enter!" popover-trigger="mouseenter" class="btn btn-default">Mouseenter</a>-->
 </div>

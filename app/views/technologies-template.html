@@ -1,0 +1,9 @@
+<div class="technologies">
+    <ul class="list-unstyled list-inline">
+        <li ng-repeat="tech in technologies" class="technology-box">
+            <a ng-href="tech.link" title="tech.title">
+                <img ng-src="{{ tech.imagePath }}" width="110" height="30" alt="tech.title" />
+            </a>
+        </li>
+    </ul>
+</div>

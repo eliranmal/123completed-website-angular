@@ -1,0 +1,77 @@
+[
+    {
+        "link": "http://angularjs.org/",
+        "title": "AngularJS",
+        "imagePath": "/images/logos/technologies/angularjs-small.png"
+    },
+    {
+        "link": "http://www.gigaspaces.com/",
+        "title": "GigaSpaces",
+        "imagePath": "/images/logos/technologies/gigaspaces-small.png"
+    },
+    {
+        "link": "http://www.cloudifysource.org/",
+        "title": "GigaSpaces Cloudify",
+        "imagePath": "/images/logos/technologies/cloudify-small.png"
+    },
+    {
+        "link": "http://www.postgresql.org/",
+        "title": "PostgreSQL",
+        "imagePath": "/images/logos/technologies/postgresql-small.png"
+    },
+    {
+        "link": "http://www.springsource.org/",
+        "title": "Spring",
+        "imagePath": "/images/logos/technologies/spring-small.png"
+    },
+    {
+        "link": "http://code.google.com/webtoolkit/",
+        "title": "GWT",
+        "imagePath": "/images/logos/technologies/gwt5-small.png"
+    },
+    {
+        "link": "http://www.jboss.org/",
+        "title": "JBoss",
+        "imagePath": "/images/logos/technologies/jboss-small.png"
+    },
+    {
+        "link": "http://www.java.com/",
+        "title": "Java",
+        "imagePath": "/images/logos/technologies/java-small.png"
+    },
+    {
+        "link": "http://www.microsoft.com/net",
+        "title": ".NET",
+        "imagePath": "/images/logos/technologies/dot-net-small.png"
+    },
+    {
+        "link": "http://www.oracle.com/us/products/database/index.html",
+        "title": "Oracle Database",
+        "imagePath": "/images/logos/technologies/oracle-database-small.png"
+    },
+    {
+        "link": "http://www.oracle.com/us/products/servers-storage/solaris/solaris11/overview/index.html",
+        "title": "Solaris",
+        "imagePath": "/images/logos/technologies/solaris-small.png"
+    },
+    {
+        "link": "http://www.redhat.com/",
+        "title": "Redhat",
+        "imagePath": "/images/logos/technologies/redhat-small.png"
+    },
+    {
+        "link": "http://tomcat.apache.org/",
+        "title": "Apache Tomcat",
+        "imagePath": "/images/logos/technologies/tomcat-small.png"
+    },
+    {
+        "link": "http://www-01.ibm.com/software/websphere/",
+        "title": "Websphere",
+        "imagePath": "/images/logos/technologies/websphere-small.png"
+    },
+    {
+        "link": "http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html",
+        "title": "Oracle Weblogic",
+        "imagePath": "/images/logos/technologies/oracle-weblogic-small.png"
+    }
+]

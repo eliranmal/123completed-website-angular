@@ -1,0 +1,17 @@
+.technologies-box {
+  padding: $c-box-pad;
+
+  .technologies {
+    ul {
+      li {
+        padding: 1em .5em;
+        img {
+          @include c-grayscale();
+          &:hover {
+            @include c-grayscale-reset();
+          }
+        }
+      }
+    }
+  }
+}
