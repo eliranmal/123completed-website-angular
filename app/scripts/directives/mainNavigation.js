@@ -9,11 +9,7 @@ angular.module('123CompletedWebsiteApp')
                 return {
                     pre: function preLink(scope, element, attrs) {
 
-
-                        var data,
-                            services;
-
-                        data = {
+                        var data = {
                             model: [
                                 {
                                     label: 'Services',
