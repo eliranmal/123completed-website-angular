@@ -1,26 +1,34 @@
-// TODO encapsulate all partials to prevent the use of !important - use the rule order
 .acknowledgments-box {
 
   .acknowledgments-ticker {
 
-    * {
-      font-size: $font-size-large;
-      font-weight: bold;
-      color: $c-header-main-bg;
-    }
     .quote {
-      padding: 0;
+      height: $c-tile-height / 2.5;
+      padding: 1em 0;
       border: 0 none;
       //font-size: 1.4em;
       font-size: .9em;
       line-height: 1.7;
-      font-family: lane, sans-serif;
       text-align: left;
+      font-family: lane, sans-serif;
+      font-size: $font-size-large;
+      font-weight: bold;
       letter-spacing: .04em;
+
+      &:before {
+        content: '\201c';
+        //content: '\2760';
+        float: left;
+        display: block;
+        width: 1em;
+        height: 100%;
+        font: 2em helvatica serif;
+        text-align: center;
+      }
     }
     .ref {
-      text-align: right;
-      font-size: .8em;
+      text-align: left;
+      text-indent: 2.5em;
     }
   }
 }

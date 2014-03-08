@@ -1,12 +1,13 @@
-
 .banner {
   padding: $c-box-pad;
   .carousel-inner {
     height: $c-tile-height - $c-box-pad * 2;
     border: 1px solid #fff;
-    box-shadow: 4px 6px 22px #ccc;
+    box-shadow: -4px -6px 20px #ccc;
     img {
       width: 100%;
+      margin: auto;
+      background-size: contain;
     }
   }
 }

@@ -18,6 +18,7 @@
   line-height: $c-header-top-height;
   background-color: $c-header-top-bg;
   border-bottom: 1px solid $c-footer-bg;
+  font-size: $font-size-small;
 }
 
 #header-main {
@@ -34,7 +35,7 @@
     //background-size: contain;
     span {
       height: 50px;
-      color: #fff;
+      color: $c-logo-color;
       &.one {
         line-height: 50px;
         font-size: 26px;

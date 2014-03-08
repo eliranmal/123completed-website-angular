@@ -1,111 +1,113 @@
 'use strict';
 
 angular.module('123CompletedWebsiteApp')
-    .directive('mainNavigation', function ($resource) {
+    .directive('mainNavigation', function ($resource, $compile) {
         return {
-            template: '<nav id="main-nav"></nav>',
             restrict: 'E',
             replace: true,
-            link: function (scope, element, attrs) {
+            compile: function () {
+                return {
+                    pre: function preLink(scope, element, attrs) {
 
-                function buildNavigationTree (el, nodes, toplevel) {
 
-                    if (!nodes.length) {
-                        return;
-                    }
+                        var data,
+                            services;
 
-                    var list = angular.element('<ul></ul>');
-                    if (toplevel) {
-                        list.addClass('list-inline pull-right');
-                    } else {
-//                        list.addClass('list-unstyled')
-                    }
-                    el.append(list);
-
-                    angular.forEach(nodes, function (n) {
-                        var listItem = angular.element('<li></li>');
-                        var anchor = angular.element('<a tabindex="' + n.tabindex + '">' + n.label + '</a>');
-                        listItem.append(anchor);
-                        n.link && anchor.attr('href', n.link);
-
-                        if (n.children && n.children.length) {
-                            // recursive call for nested levels
-                            buildNavigationTree(listItem, n.children);
-                        }
-
-                        list.append(listItem);
-                    });
-                }
-
-                scope.$watch('model', function (newValue) {
-                    newValue && buildNavigationTree(element, newValue, true);
-                });
-
-            },
-            controller: function ($scope) {
-
-                var scope,
-                    engagementModels = [],
-                    services,
-                    modelTabIndex = 31;
-
-                scope = {
-                    model: [
-                        {
-                            label: 'Services',
-//                            link: '/services.html',
-                            tabindex: 11,
-                            children: [
+                        data = {
+                            model: [
                                 {
-                                    label: 'Global Services',
-                                    link: '/global-services.html',
-                                    tabindex: 21
+                                    label: 'Services',
+//                            link: '/services.html',
+                                    tabindex: 11,
+                                    children: [
+                                        {
+                                            label: 'Global Services',
+                                            link: '/global-services.html',
+                                            tabindex: 21
+                                        },
+                                        {
+                                            label: 'Engagement Models',
+                                            link: '/engagement-models.html',
+                                            tabindex: 22
+                                        }
+
+                                    ]
                                 },
                                 {
-                                    label: 'Engagement Models',
-                                    link: '/engagement-models.html',
-                                    tabindex: 22,
-                                    children: engagementModels
+                                    label: 'Training',
+                                    link: '/training.html',
+                                    tabindex: 12
+                                },
+                                {
+                                    label: 'Business Relations',
+                                    link: '/business-relations.html',
+                                    tabindex: 13
+                                },
+                                {
+                                    label: 'Management',
+                                    link: '/staff.html',
+                                    tabindex: 14
+                                },
+                                {
+                                    label: 'Contact',
+                                    link: '/contact-us.html',
+                                    tabindex: 15
+                                }
+                            ]
+                        };
+
+                        function buildNavigationTree(el, nodes, toplevel) {
+
+                            if (!nodes.length) {
+                                return;
+                            }
+
+                            var list = angular.element('<ul></ul>');
+                            if (toplevel) {
+                                list.addClass('list-inline pull-right');
+                            } else {
+                                //                        list.addClass('list-unstyled')
+                                list.addClass('dropdown-menu');
+                            }
+                            el.append(list);
+
+                            angular.forEach(nodes, function (n) {
+                                var listItem = angular.element('<li></li>');
+                                if (toplevel && n.children) {
+                                    listItem.addClass('dropdown');
+                                }
+                                var anchor = angular.element('<a tabindex="' + n.tabindex + '">' + n.label + '</a>');
+                                if (toplevel && n.children) {
+                                    anchor.addClass('dropdown-toggle');
+                                }
+                                listItem.append(anchor);
+                                n.link && anchor.attr('href', n.link);
+
+                                if (n.children && n.children.length && toplevel) {
+                                    // recursive call for nested levels
+                                    buildNavigationTree(listItem, n.children);
                                 }
 
-                            ]
-                        },
-                        {
-                            label: 'Training',
-                            link: '/training.html',
-                            tabindex: 12
-                        },
-                        {
-                            label: 'Business Relations',
-                            link: '/business-relations.html',
-                            tabindex: 13
-                        },
-                        {
-                            label: 'Management',
-                            link: '/staff.html',
-                            tabindex: 14
-                        },
-                        {
-                            label: 'Contact',
-                            link: '/contact-us.html',
-                            tabindex: 15
+                                list.append(listItem);
+                            });
                         }
-                    ]
+
+
+                        // we need to compile and link the template ourselves:
+                        // the class attributes won't have any affect as bootstrap will
+                        // always instantiate before linkage has had a chance to execute,
+                        // thus the menu-toggle won't work.
+                        var navEl = angular.element('<nav></nav>').attr('id', 'main-nav');
+                        buildNavigationTree(navEl, data.model, true);
+
+                        element.append(navEl);
+
+                        var linkFn = $compile(navEl);
+                        linkFn(scope);
+
+                    },
+                    post: angular.noop
                 };
-
-                $resource('data/services.json').get(function (d) {
-
-                    services = d.services;
-                    services && angular.forEach(services, function (s) {
-                        engagementModels.push({
-                            label: s.shortTitle,
-                            link: '/engagement-models.html#' + s.id,
-                            tabindex: modelTabIndex++
-                        });
-                    });
-
-                    angular.extend($scope, scope);
-                });
 
             }
         };

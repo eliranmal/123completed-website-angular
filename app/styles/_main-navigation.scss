@@ -1,66 +1,75 @@
 #main-nav {
   padding-top: 30px;
 
-  // lists at any level
-  ul {
+  // top level: this is the horizontal menu
+  > ul {
     padding: 0;
     margin: 0;
-    li {
-      list-style-type: none;
-    }
-  }
 
-  // top level: this is the horizontal menu
-  > ul > li {
-    position: relative;
-    padding: 0 0 0 2em;
+    > li {
+      margin-left: 1.5em;
 
-    > a {
-      padding-bottom: 6px;
-      font-size: 1.3em;
-      line-height: 1;
-      // TODO active state
-      /*      &.active {
-              border-bottom: 1px solid $c-123-color;
-            }*/
-    }
+      > a {
+        padding-bottom: 6px;
+        font-size: 1.3em;
+        line-height: 1;
+        cursor: pointer;
+        // TODO active state
+        /*      &.active {
+                border-bottom: 1px solid $c-123-color;
+              }*/
+      }
 
-    // second level lists: dropdown menus
-    > a + ul {
-      position: absolute;
-      top: calc(1.3em + 6px);
-      z-index: 9999;
-      display: none;
-      width: 20em;
-      padding: 1em 1.5em;
-      background-color: $c-composite-color;
-      box-shadow: 1px 1px 6px $c-shadow-color;
+      > a + ul.dropdown-menu {
+        padding: $c-box-pad / 2;
+        @include border-top-radius(0);
+        @include border-bottom-radius(0);
 
-      li {
+        li {
 
-        a {
-          display: block;
-          padding: .2em 0;
-          font-size: 1em;
-          font-weight: bold;
-          color: $link-color;
-
-          &:hover {
-            color: $link-hover-color;
+          a {
+            color: $c-link-color;
           }
         }
-
-        // any list but the dropdown menus level
-        ul {
-          padding: 0 1em;
-          border-top: 1px solid #aaa;
-        }
       }
-    }
 
-    > a + ul:hover,
-    > a:hover + ul {
-      display: block;
+      // second level lists: dropdown menus
+      //> a + ul {
+      //  position: absolute;
+      //  top: calc(1.3em + 6px);
+      //  z-index: 9999;
+      //  display: none;
+      //  width: 20em;
+      //  padding: 1em 1.5em;
+      //  background-color: $c-composite-color;
+      //  box-shadow: 1px 1px 6px $c-shadow-color;
+      //
+      //  li {
+      //
+      //    a {
+      //      display: block;
+      //      padding: .2em 0;
+      //      font-size: 1em;
+      //      font-weight: bold;
+      //      color: $link-color;
+      //
+      //      &:hover {
+      //        color: $link-hover-color;
+      //      }
+      //    }
+      //
+      //    // any list but the dropdown menus level
+      //    ul {
+      //      padding: 0 1em;
+      //      border-top: 1px solid #aaa;
+      //    }
+      //  }
+      //}
+      //
+      //> a + ul:hover,
+      //> a:hover + ul {
+      //  display: block;
+      //}
     }
   }
 }

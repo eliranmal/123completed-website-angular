@@ -16,17 +16,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <section ng-include="'views/partials/who-we-are.html'"></section>
-            </div>
-            <div class="col-md-4">
-                <section class="what-we-do" ng-include="'views/partials/what-we-do.html'"></section>
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <section class="acknowledgments-box">
                     <h2>Our customers say</h2>
                     <div acknowledgments></div>
+                    <a class="home-link pull-right" href="/success-stories.html#wrap">See references</a>
                 </section>
+            </div>
+            <div class="col-md-4">
+                <section ng-include="'views/partials/who-we-are.html'"></section>
             </div>
         </div>
 
@@ -34,4 +32,6 @@
             <!--<div class="col-md-8" ng-include="'views/partials/technologies.html'"></div>-->
         </div>
     </div>
+
+    <!--<a popover-placement="bottom" popover="I appeared on mouse enter!" popover-trigger="mouseenter" class="btn btn-default">Mouseenter</a>-->
 </div>

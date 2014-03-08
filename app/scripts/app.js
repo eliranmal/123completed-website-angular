@@ -1,5 +1,14 @@
 'use strict';
 
+/*
+.run(['$route', '$rootScope', '$location', '$anchorScroll', '$routeParams', function($route, $rootScope, $location, $anchorScroll, $routeParams) {
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+        $location.hash($routeParams.scrollTo);
+        $anchorScroll();
+    });
+}]);
+*/
+
 angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'ui.bootstrap.setNgAnimate', 'wu.masonry'])
     .config(['$routeProvider', '$locationProvider', '$provide', '$injector', function ($routeProvider, $locationProvider, $provide, $injector) {
 
@@ -22,6 +31,9 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
 
         $locationProvider.html5Mode(true);
 
+
+
+
         $provide.decorator('ngViewDirective', function ($delegate) {
 
             var directive = $delegate[0],
@@ -36,7 +48,7 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
                     link.apply(this, arguments);
                     var scope = arguments[0];
                     scope.$on('ngRepeatCompleted', function (d) {
-                        console.log('caught "ngRepeatCompleted" event. event data is [', d, ']');
+//                        console.log('caught "ngRepeatCompleted" event. event data is [', d, ']');
                         scope.fn();
                     });
                 };
@@ -55,8 +67,10 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
                     link.apply(this, arguments);
                     var scope = arguments[0];
                     scope.$watch('$$childTail.$last', function (n, o, s) {
-                        console.log('emitting "ngRepeatCompleted" event for ngRepeat [', directive, ']');
-                        n && s.$emit('ngRepeatCompleted', directive);
+                        if (n) {
+//                            console.log('emitting "ngRepeatCompleted" event for ngRepeat [', directive, ']');
+                            s.$emit('ngRepeatCompleted', directive);
+                        }
                     });
                 };
             };
@@ -66,15 +80,6 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
     }])
 
     .run(['$route', angular.noop]);
-
-/*
-.run(['$route', '$rootScope', '$location', '$anchorScroll', '$routeParams', function($route, $rootScope, $location, $anchorScroll, $routeParams) {
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-        $location.hash($routeParams.scrollTo);
-        $anchorScroll();
-    });
-}]);
-*/
 
 
 // workaround for angular-bootstrap carousel subsequent slides not working.
