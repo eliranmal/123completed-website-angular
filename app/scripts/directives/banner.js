@@ -9,13 +9,15 @@ angular.module('123CompletedWebsiteApp').directive('banner', ['$animate', functi
             $scope.animate = false;
             $scope.animateGlobal = true;
 
-            $scope.$watch('animateGlobal', function(val){
+            $scope.$watch('animateGlobal', function (val) {
                 $animate.enabled(val);
             });
 
             $scope.slides = [
-                { image: 'images/stock-photos/can-stock-photo_csp0167406.jpg', text: 'blah' },
-                { image: 'images/stock-photos/can-stock-photo_csp4071433.jpg', text: 'blah' }
+//                { image: 'images/stock-photos/can-stock-photo_csp0167406.jpg', text: 'blah' },
+//                { image: 'images/stock-photos/can-stock-photo_csp4071433.jpg', text: 'blah' },
+                { image: 'images/stock-photos/can-stock-photo_csp2365582.jpg', text: 'blah' },
+                { image: 'images/stock-photos/can-stock-photo_csp0072448.jpg', text: 'blah' }
             ];
 
         }

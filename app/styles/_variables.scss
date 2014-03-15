@@ -7,10 +7,18 @@ $c-header-top-height: 40px;
 $c-tile-height: 390px;
 $c-box-pad: 32px;
 
+$c-header-side-pad: 0;
+$c-footer-side-pad: 0;
+
+/* typography
+-------------------------------------------------- */
+
+$c-base-font: district_prothin;
+$c-base-font-size: 18px;
+
 /* colors
 -------------------------------------------------- */
 
-/*
 $c-composite-color: $c-color-base-05;
 $c-shadow-color: $c-color-base-04;
 $c-123-color: $c-color-base-01;
@@ -24,18 +32,30 @@ $c-text-main-color: $c-color-base-04;
 $c-link-composite-color: white;
 $c-link-composite-color-hover: $c-color-base-07;
 $c-box-color: $c-color-base-05;
-*/
 
+
+
+
+/*
+
+REBRAND
+
+-------------------------------------------------- */
+
+$c-header-side-pad: $c-box-pad;
+$c-footer-side-pad: $c-box-pad;
+
+//$c-base-font: proxima_nova_rgregular; // TODO change to thin!
 
 $c-composite-color: $c-color-base-05;
 $c-shadow-color: $c-color-base-04;
 $c-123-color: $c-color-base-01;
 $c-header-top-bg: $c-color-base-09;
 //$c-header-main-bg: #9195A6;
-$c-header-main-bg: $c-color-base-08;
-//$c-header-main-bg: #fff;
-$c-header-bottom-bg: #f2f2f2;
-$c-body-bg: #f2f2f2;
+//$c-header-main-bg: $c-color-base-08;
+$c-header-main-bg: $c-123-color;
+$c-header-bottom-bg: #e9e9e9;
+$c-body-bg: #e9e9e9;
 //$c-body-bg: #9195A6;
 $c-footer-bg: $c-color-base-03;
 //$c-footer-bg: silver;
@@ -46,5 +66,5 @@ $c-link-color: $c-color-base-08;
 $c-link-hover-color: $c-123-color;
 $c-link-composite-color: #f2f2f2;
 $c-link-composite-color-hover: $c-color-base-07;
-$c-box-color: #f2f2f2;
+$c-box-color: #e9e9e9;
 $c-logo-color: #fff;

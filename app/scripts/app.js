@@ -1,14 +1,5 @@
 'use strict';
 
-/*
-.run(['$route', '$rootScope', '$location', '$anchorScroll', '$routeParams', function($route, $rootScope, $location, $anchorScroll, $routeParams) {
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-        $location.hash($routeParams.scrollTo);
-        $anchorScroll();
-    });
-}]);
-*/
-
 angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'ui.bootstrap.setNgAnimate', 'wu.masonry'])
     .config(['$routeProvider', '$locationProvider', '$provide', '$injector', function ($routeProvider, $locationProvider, $provide, $injector) {
 
@@ -49,7 +40,7 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
                     var scope = arguments[0];
                     scope.$on('ngRepeatCompleted', function (d) {
 //                        console.log('caught "ngRepeatCompleted" event. event data is [', d, ']');
-                        scope.fn();
+                        scope.fn && scope.fn();
                     });
                 };
             };
@@ -98,3 +89,13 @@ angular.module('ui.bootstrap.setNgAnimate', ['ngAnimate'])
             }
         };
     }]);
+
+
+/*
+ .run(['$route', '$rootScope', '$location', '$anchorScroll', '$routeParams', function($route, $rootScope, $location, $anchorScroll, $routeParams) {
+ $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+ $location.hash($routeParams.scrollTo);
+ $anchorScroll();
+ });
+ }]);
+ */

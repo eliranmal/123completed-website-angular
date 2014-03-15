@@ -9,8 +9,8 @@ $link-hover-color: $c-link-hover-color;
 $headings-color: $c-headings-color;
 
 $headings-font-weight: normal;
-$font-size-base: 18px;
-$font-family-base: district_prothin;
+$font-size-base: $c-base-font-size;
+$font-family-base: $c-base-font;
 $line-height-base: 1.5;
 $grid-gutter-width: $c-box-pad * .9;
 

@@ -19,12 +19,25 @@
   background-color: $c-header-top-bg;
   border-bottom: 1px solid $c-footer-bg;
   font-size: $font-size-small;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    padding-left: $c-header-side-pad;
+    padding-right: $c-header-side-pad;
+  }
 }
 
 #header-main {
   //padding: 30px 0 0;
   padding: 20px 0 40px;
   background-color: $c-header-main-bg;
+  .container {
+    padding-left: $c-header-side-pad;
+    padding-right: $c-header-side-pad;
+  }
   a {
     font-weight: normal;
   }
