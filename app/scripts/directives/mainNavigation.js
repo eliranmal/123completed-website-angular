@@ -13,17 +13,17 @@ angular.module('123CompletedWebsiteApp')
                             model: [
                                 {
                                     label: 'Services',
-//                            link: '/services.html',
+//                            link: '/services',
                                     tabindex: 11,
                                     children: [
                                         {
                                             label: 'Global Services',
-                                            link: '/global-services.html',
+                                            link: '/global-services',
                                             tabindex: 21
                                         },
                                         {
                                             label: 'Engagement Models',
-                                            link: '/engagement-models.html',
+                                            link: '/engagement-models',
                                             tabindex: 22
                                         }
 
@@ -31,22 +31,22 @@ angular.module('123CompletedWebsiteApp')
                                 },
                                 {
                                     label: 'Training',
-                                    link: '/training.html',
+                                    link: '/training',
                                     tabindex: 12
                                 },
                                 {
                                     label: 'Business Relations',
-                                    link: '/business-relations.html',
+                                    link: '/business-relations',
                                     tabindex: 13
                                 },
                                 {
                                     label: 'Management',
-                                    link: '/staff.html',
+                                    link: '/staff',
                                     tabindex: 14
                                 },
                                 {
                                     label: 'Contact',
-                                    link: '/contact-us.html',
+                                    link: '/contact-us',
                                     tabindex: 15
                                 }
                             ]

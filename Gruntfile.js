@@ -1,6 +1,7 @@
 // Generated on 2013-11-30 using generator-angular 0.3.0
 'use strict';
 var LIVERELOAD_PORT = 35729;
+var modRewrite = require('connect-modrewrite');
 var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
@@ -50,24 +51,23 @@ module.exports = function (grunt) {
             options: {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
-                hostname: 'localhost',
-                middleware: function (connect, options) {
-                    var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
-                    return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
-                        optBase.map(function (path) {
-                            return connect.static(path);
-                        }));
-                }
+                hostname: 'localhost'
             },
             livereload: {
                 options: {
-                    open: true,
-                    base: [
-                        '.tmp',
-                        '<%= yeoman.app %>'
-                    ]
+                    middleware: function (connect) {
+                        return [
+                            modRewrite([
+                                '!\\.\\w+$ /'
+                            ]),
+                            lrSnippet,
+                            mountFolder(connect, '.tmp'),
+                            mountFolder(connect, yeomanConfig.app)
+                        ];
+                    }
 /*
                     middleware: function (connect) {
+                        grunt.log.writeln('- - - -- - - yo yo yo livereload');
                         return [
                             lrSnippet,
                             mountFolder(connect, '.tmp'),

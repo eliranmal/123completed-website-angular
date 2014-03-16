@@ -12,8 +12,7 @@
     "karma-requirejs": "~0.2.0",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.6",
-    "grunt-karma": "~0.6.2",
-    "connect-modrewrite": "~0.6.4-pre"
+    "grunt-karma": "~0.6.2"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -36,7 +35,8 @@
     "matchdep": "~0.3.0",
     "connect-livereload": "~0.3.2",
     "grunt-ngmin": "~0.0.3",
-    "grunt-ftp-deploy": "~0.1.1"
+    "grunt-ftp-deploy": "~0.1.1",
+    "connect-modrewrite": "~0.6.4-pre"
   },
   "engines": {
     "node": ">=0.10.0"

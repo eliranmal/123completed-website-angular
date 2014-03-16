@@ -3,25 +3,26 @@
 angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'ui.bootstrap.setNgAnimate', 'wu.masonry'])
     .config(['$routeProvider', '$locationProvider', '$provide', '$injector', function ($routeProvider, $locationProvider, $provide, $injector) {
 
+        $locationProvider.html5Mode(true);
+
         $routeProvider
             .when('/', {
-                templateUrl: '/views/home.html'
+                templateUrl: 'views/home.html',
+                controller: 'MainCtrl'
             })
             .when('/:page', {
                 templateUrl: function (params) {
                     console.log('page: ' + params.page);
                     if (params.page) {
-                        return '/views/partials/' + params.page;
+                        return '/views/partials/' + params.page + '.html';
                     }
                     return '';
-                }
+                },
+                controller: 'MainCtrl'
             })
             .otherwise({
                 redirectTo: '/'
             });
-
-        $locationProvider.html5Mode(true);
-
 
 
 
