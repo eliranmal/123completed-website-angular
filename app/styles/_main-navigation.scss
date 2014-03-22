@@ -7,10 +7,10 @@
     margin: 0;
 
     > li {
-      margin-left: 1.5em;
+      margin: 0;
 
       > a {
-        padding-bottom: 6px;
+        padding: 0 .5em 6px;
         font-size: 1.3em;
         line-height: 1;
         cursor: pointer;
@@ -21,14 +21,20 @@
       }
 
       > a + ul.dropdown-menu {
-        padding: $c-box-pad / 2;
         @include border-top-radius(0);
         @include border-bottom-radius(0);
 
         li {
-
           a {
+            padding: $c-box-pad / 4 $c-box-pad / 1.333;
             color: $c-link-color;
+            &:hover {
+              color: $c-link-hover-color;
+            }
+            &:hover,
+            &:focus {
+              background-color: #fff;
+            }
           }
         }
       }

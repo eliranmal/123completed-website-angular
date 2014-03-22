@@ -1,7 +1,7 @@
 <div class="banner">
     <carousel interval="interval">
         <slide ng-repeat="slide in slides" active="slide.active">
-            <img width="100%" ng-src="{{slide.image}}?{{$index}}" />
+            <img width="100%" ng-src="{{slide.image}}" />
             <div class="carousel-caption">
                 <h4>Slide {{$index}}</h4>
                 <p>{{slide.text}}</p>

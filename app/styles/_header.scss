@@ -19,10 +19,18 @@
   background-color: $c-header-top-bg;
   border-bottom: 1px solid $c-footer-bg;
   font-size: $font-size-small;
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 .5em;
+      &:hover {
+        background-color: lighten($c-header-top-bg, 4%);
+      }
+    }
   }
   .container {
     padding-left: $c-header-side-pad;

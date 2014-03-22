@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'ui.bootstrap.setNgAnimate', 'wu.masonry'])
-    .config(['$routeProvider', '$locationProvider', '$provide', '$injector', function ($routeProvider, $locationProvider, $provide, $injector) {
+    .config(['$routeProvider', '$locationProvider', '$provide', '$logProvider', function ($routeProvider, $locationProvider, $provide, $logProvider) {
+
+        $logProvider.debugEnabled(true);
 
         $locationProvider.html5Mode(true);
 
@@ -12,7 +14,6 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
             })
             .when('/:page', {
                 templateUrl: function (params) {
-                    console.log('page: ' + params.page);
                     if (params.page) {
                         return '/views/partials/' + params.page + '.html';
                     }
