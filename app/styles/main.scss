@@ -9,7 +9,8 @@
 @import "libs-override";
 /* libs */
 @import "bootstrap-sass/lib/bootstrap";
-//@import "../bower_components/font-awesome/scss/font-awesome"; // TODO test font awesome and utilize it
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import "../bower_components/font-awesome/scss/font-awesome";
 /* common styles */
 @import "common";
 /* partials */
@@ -23,5 +24,6 @@
 @import "staff";
 @import "services";
 @import "technologies";
+@import "training";
 /* angularjs animation */
 @import "animation";
