@@ -1,5 +1,5 @@
 <div class="container">
-    <section>
+    <section ng-controller="TrainingCtrl">
         <h1>Training</h1>
 
         <p class="island">
@@ -13,5 +13,19 @@
             technologies on the market long before the educational departments in
             those software companies develop their official courses.
         </p>
+
+        <div class="training" ng-repeat="training in model.trainings">
+            <h2>{{ training.title }}</h2>
+
+            <p>{{ training.description }}</p>
+            <ul class="list-inline list-unstyled">
+                <li><a class="syllabus-link" target="_self"
+                       ng-href="{{ training.syllabusDownloadLink }}">
+                    <i class="fa fa-download"></i> Download Syllabus</a></li>
+                <li><a href="emailto:info@123completed.com">
+                    <i class="fa fa-pencil"></i> Get A Price Quote</a></li>
+            </ul>
+        </div>
+
     </section>
 </div>
