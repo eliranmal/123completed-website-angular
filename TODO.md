@@ -1,1 +1,2 @@
-* add backend, serve the data folder via nodejs express server api.
+- configure ngmin properly to avoid having to declare dependencies by name
+- add backend, serve the data folder via nodejs express server api.

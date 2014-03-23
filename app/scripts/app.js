@@ -26,8 +26,7 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
             });
 
 
-
-        $provide.decorator('ngViewDirective', function ($delegate) {
+        $provide.decorator('ngViewDirective', ['$delegate', function ($delegate) {
 
             var directive = $delegate[0],
                 link = directive.link;
@@ -48,9 +47,9 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
             };
 
             return $delegate;
-        });
+        }]);
 
-        $provide.decorator('ngRepeatDirective', function ($delegate) {
+        $provide.decorator('ngRepeatDirective', ['$delegate', function ($delegate) {
 
             var directive = $delegate[0],
                 link = directive.link;
@@ -69,7 +68,8 @@ angular.module('123CompletedWebsiteApp', ['ngRoute', 'ngAnimate', 'ngResource', 
             };
 
             return $delegate;
-        });
+        }]);
+
     }])
 
     .run(['$route', angular.noop]);
