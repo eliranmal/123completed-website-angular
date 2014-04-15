@@ -45,7 +45,7 @@ module.exports = function (grunt) {
             gruntConfig[fileName] = require('./grunt/' + fileName + '.js')(grunt, shared);
         });
 
-    // load the grunt Config
+    // load the grunt config
     grunt.initConfig(gruntConfig);
 
 
