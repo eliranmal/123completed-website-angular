@@ -6,7 +6,6 @@ angular.module('123CompletedWebsiteApp')
         var trainingsData = $resource('data/trainings.json').query();
 
         angular.extend($scope, {
-
             model: {
                 trainings: trainingsData
             }

@@ -17,7 +17,19 @@
         <div class="training" ng-repeat="training in model.trainings">
             <h2>{{ training.title }}</h2>
 
-            <p>{{ training.description }}</p>
+            <div class="row">
+
+                <p class="col-xs-9">{{ training.description }}</p>
+
+                <div class="col-xs-3">
+                    <a class="syllabus-link btn btn-info btn-block" target="_self"
+                       ng-href="{{ training.syllabusDownloadLink }}">
+                        <i class="fa fa-download"></i> Download Syllabus</a>
+                    <a class="btn btn-info btn-block" href="mailto:info@123completed.com">
+                        <i class="fa fa-pencil"></i> Get A Price Quote</a>
+                </div>
+            </div>
+<!--
             <ul class="list-inline list-unstyled">
                 <li><a class="syllabus-link" target="_self"
                        ng-href="{{ training.syllabusDownloadLink }}">
@@ -25,6 +37,7 @@
                 <li><a href="emailto:info@123completed.com">
                     <i class="fa fa-pencil"></i> Get A Price Quote</a></li>
             </ul>
+-->
         </div>
 
     </section>

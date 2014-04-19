@@ -1,3 +1,5 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 /* common */
 @import "fonts";
@@ -5,8 +7,8 @@
 @import "images";
 @import "variables";
 @import "functions";
-/* libs overrides */
-@import "libs-override";
+/* libs defaults */
+@import "defaults";
 /* libs */
 @import "bootstrap-sass/lib/bootstrap";
 $fa-font-path: "../bower_components/font-awesome/fonts";
