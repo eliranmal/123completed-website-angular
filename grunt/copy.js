@@ -12,6 +12,7 @@ module.exports = function (grunt, shared) {
                         '.htaccess',
 //                            'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
                         'styles/fonts/**/*.{svg,woff,eot,ttf,css}',
+                        'bower_components/font-awesome/fonts/fontawesome-webfont.*',
                         'data/*.json'
                     ]
                 },
